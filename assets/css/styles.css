@@ -1,0 +1,133 @@
+html {
+    line-height: 1.15
+}
+
+h1 {
+	font-family: "Bitter";
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+i:hover {
+	color: #1eb2e4;
+}
+
+p {
+	font-size: 20px;
+	color: black;
+}
+
+
+#nav {
+	border-radius: 0px;
+	color: black;
+	margin-bottom:0px;
+	background-color: #26374b;
+}
+
+
+.bodyHeaders {
+	font-family: "Nunito";
+	font-size: 35px;
+}
+
+#firstHeader {
+	padding-bottom: 60px;
+}
+
+#secondHeader {
+	padding-top: 100px; 
+	padding-bottom: 60px;
+}
+
+
+.homepageText {
+/*	width: 100%;
+	position: relative;
+	display: inline-block;
+	top: 240px;
+	left: 140px;
+	font-size: 3em;
+	*/color: white;
+}
+
+.homepage {
+	margin-top: 200px;
+}
+
+.topContainer {
+	height: 750px;
+	position:relative;
+	display: block;
+	width: 100%;
+	background-image: url("assets/images/stock-2.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.homepageTextDiv {
+	font-family: "Nunito";
+	background: transparent;
+	font-size: 90px;
+	background: -webkit-linear-gradient(#fff, #fff,#1eb2e4);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#secondBigDiv {
+	padding-top: 50px;
+	padding-bottom: 30px;
+
+ background-image: linear-gradient(#fff, #6dd7fb);
+ box-shadow: inset 0 0 100px hsla(0,0%,0%,.0);
+ }
+
+#thirdBigDiv {
+	padding-top: 20px;
+	padding-bottom: 100px;
+ background-image: linear-gradient(#6dd7fb, #fff, #fff);
+ box-shadow: inset 0 0 100px hsla(0,0%,0%,.0);
+ }
+
+ #fourthBigDiv {
+ background-image: linear-gradient(#fff, #ececec);
+ box-shadow: inset 0 0 100px hsla(0,0%,0%,.0);
+ }
+
+#fifthBigDiv {
+ 	background-color: #ececec;
+ }
+
+
+#footer {
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	background-color: #26374b;
+	color: white;
+}
+
+.footerContent {
+	color: white;
+}
+
+/*NAV BAR ANIMATIONS*/
+/* Pull up  */
+ul.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+ul.pullUp a:hover:before
+{
+    height: 100%;
+}
