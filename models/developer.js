@@ -32,6 +32,19 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     }
 
-  }, {timestamps: true})
+  }, {
+    timestamps: true,
+    classMethods: {
+      associate: function(models) {
+        // Associating Developer with Invite and requests
+        Developer.hasMany(models.DeveloperInvite, {
+          onDelete: "cascade"
+        });
+        Developer.hasMany(models.DeveloperRequest, {
+          onDelete: "cascade"
+        });
+      }
+    }
+  });
   return Developer;
 }

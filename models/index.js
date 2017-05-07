@@ -33,20 +33,5 @@ Object.keys(db).forEach(function(modelName) {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-//relationships
-db.Project.hasMany(db.Developer);
-db.Project.hasMany(db.Investor);
-db.Project.hasMany(db.DeveloperInvite);
-db.Project.hasMany(db.DeveloperRequest);
-db.Project.hasMany(db.InvestorInvite);
-db.Project.hasMany(db.InvestorRequest);
-
-db.Entrepeneur.hasMany(db.Project);
-
-db.Investor.hasMany(db.InvestorInvite);
-db.Investor.hasMany(db.InvestorRequest);
-
-db.Developer.hasMany(db.DeveloperInvite);
-db.Developer.hasMany(db.DeveloperRequest);
 
 module.exports = db;

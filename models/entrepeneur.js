@@ -23,6 +23,16 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT('medium'),
       allowNull: false
     }
-  }, {timestamps: true})
+  }, {
+    timestamps: true,
+    classMethods: {
+      associate: function(models) {
+        // Associating Entrepeneur with Project
+        Entrepeneur.hasMany(models.Project, {
+          onDelete: "cascade"
+        });
+      }
+    }
+  })
   return Entrepeneur;
 }

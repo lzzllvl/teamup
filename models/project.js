@@ -53,7 +53,31 @@ module.exports = (sequelize, DataTypes) => {
       //   referencesKey: 'id'
       // }
     },
-    {timestamps: true});
+    {
+      timestamps: true,
+      classMethods: {
+        associate: function(models) {
+          // Associating Developer with Invite and requests
+          Project.hasMany(models.Developer, {
+            onDelete: "cascade"
+          });
+          Project.hasMany(models.Investor, {
+            onDelete: "cascade"
+          });
+          Project.hasMany(models.DeveloperInvite, {
+            onDelete: "cascade"
+          });
+          Project.hasMany(models.DeveloperRequest, {
+            onDelete: "cascade"
+          });
+          Project.hasMany(models.InvestorInvite, {
+            onDelete: "cascade"
+          });
+          Project.hasMany(models.InvestorRequest, {
+            onDelete: "cascade"
+          });
+        }
+      }});
 
     return Project;
 }

@@ -30,6 +30,19 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false
     }
-  }, {timestamps: true})
+  }, {
+    timestamps: true,
+    classMethods: {
+      associate: function(models) {
+        // Associating Developer with Invite and requests
+        Investor.hasMany(models.InvestorInvite, {
+          onDelete: "cascade"
+        });
+        Investor.hasMany(models.InvestorRequest, {
+          onDelete: "cascade"
+        });
+      }
+    }
+  });
   return Investor;
 }
