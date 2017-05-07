@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+	
+	<meta content="TeamUp | For Entrepreneurs, Developers, & Investors" property="og:title">
+	
+	<meta content="https://www.teamup.com/" property="og:url">
+	<meta content="Online platform for Entrepreneurs, Developers, & Investors to team up on business and app ideas." property="og:description">
+	<meta content="summary" property="twitter:card">
+	<meta content="@team_up" property="twitter:site">
+
+
+	<!-- Icons -->
+	<link href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+
+	<!-- GOOGLE FONTS: Nunito and Bitter -->
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- Javascript -->
+
+	<title>TeamUp</title>
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="row">
+				<nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
+				  <div class="container-fluid navbarContainer">
+				    <div class="navbar-header">
+				      <a class="navbar-brand" href="#"> TeamUp</a>
+				    </div>
+				    <ul class="nav navbar-nav navbar-right pullUp">
+				      <li><a href="#"> Entrepreneurs</a></li>
+				      <li><a href="#"> Developers</a></li>
+				      <li><a href="#"> Investors</a></li>
+				      <li><a href="join.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				    </ul>
+				  </div>
+				</nav>
+			</header>
+
+            <div class="col-xs-12 col-md-5 center-block" style="float: none;">
+                <div class="signup-box">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form role="form" id="investor-sign-up" name="investor-sign-up"
+                                    action="/join/" method="post"
+                                class="validate form ">
+                                    <div >
+                                        <h5 style="margin-top: 0">I'd like to:</h5>
+
+                                        <div class="row form-group">
+                                            <div class="col-xs-4">
+                                                <label for="user_segment_inv" class="buttonish btn btn-pill btn-large">
+                                                    <input type="radio" name="segment" value="1" class="required" id="user_segment_inv" style="margin-top: 10px;" />
+                                                    Develop
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label for="user_segment_ent" class="buttonish btn btn-pill btn-large">
+                                                    <input type="radio" name="segment" value="2" id="user_segment_ent" style="margin-top: 10px;" />
+                                                    Inovate
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label for="user_segment_dev" class="buttonish btn btn-pill btn-large">
+                                                    <input type="radio" name="segment" value="3" class="required" id="user_segment_dev" style="margin-top: 10px;" />
+                                                    Invest
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h5>Sign up via social network</h5>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <a href="#" data-next="" data-provider="linkedin" class="btn btn-secondary btn-lg btn-block social-login">
+                                                <i class="icon-linkedin"></i>
+                                                <span>Join via Linkedin</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                <input type='hidden' name='csrfmiddlewaretoken' value='CtiocfJSWsweiv8yodcoiuUffuivG3F1' />                        <h5>Sign up via email</h5>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="form-group ">
+                                            <input class="form-control required" id="id_first_name" name="first_name" placeholder="First Name" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12">
+                                        <div class="form-group ">
+                                            <input class="form-control required" id="id_last_name" name="last_name" placeholder="Last Name" type="text" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group ">
+                                            <input class="form-control required email" id="id_email" maxlength="254" name="email" placeholder="Email" type="email" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group ">
+                                            <input class="form-control required" id="id_password" name="password" placeholder="Password" type="password" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-xs-12 checkbox">
+                                            <label>
+                                                <input class="required" id="id_agreed_to_terms" name="agreed_to_terms" type="checkbox" />
+                                                    By joining TeamUp, you promise to keep the information you learn about these companies confidential.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <input type="hidden" name="next" value=""/>
+                                        <button class="btn btn-primary btn-large btn-block submit-button"
+                                                data-investor-text="Join to View Deals"
+                                                data-company-text="Join to Raise Capital">
+                                            Join Us!
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--footer goes below-->
+  
+</body>
