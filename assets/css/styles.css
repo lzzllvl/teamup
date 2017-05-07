@@ -139,6 +139,9 @@ p {
  }
 
 
+
+
+ /*FOOTER CLASSES*/
 #footer {
 	width: 100%;
 	height: 200px;
@@ -147,9 +150,61 @@ p {
 	color: white;
 }
 
+.footer__menu {
+	margin-top: 15px;
+	width: 75%;
+	text-align: right;
+}
+
+
+.topFooterMenuRow {
+	margin-top: 25px;
+}
+
+.footer__menu ul{
+	list-style: aqua;
+}
+
+.footer__menu li{
+	display:inline-block;
+	margin-left:15px;
+}
+
+.footer__menu a, .footer__menu a:visited{
+	color: #26374b;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Nunito', Arial, Helvetica;
+
+	font-size:16px;
+}
+
+.footer__menu a:hover{
+	text-decoration: underline;
+}
+
+
 .footerContent {
 	color: white;
 }
+
+.footerLogo {
+	width: 85%;
+}
+
+.footerSocial {
+	padding-left: 10px;
+}
+
+.footerSocial a {
+	padding-left: 10px;
+}
+
+.footerSocial i {
+	color: #26374b;
+}
+
+
 
 /*NAV BAR ANIMATIONS*/
 /* Pull up  */
@@ -177,5 +232,48 @@ ul.pullUp a:hover:before
   border: 1px solid black;
   padding: 20px;
   margin-top: 20px;
+}
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+@media(max-width: 1200px) {
+	.footerLogo {
+		width: 35%;
+	}
+
+	.footer__menu {
+		width: 100%;
+		text-align: left;
+	}
+}
+
+
+@media(max-width: 768px){
+	
+	.nav li {
+		display: inline-block;
+	}
+
+
+
+
+	.footer__menu li{
+		display:block;
+		margin-left:0px;
+	}
+
+	.footer__menu{
+		text-align: left;
+	}
+
+	.footer_nav{
+		padding-left:0px;
+	}
 }
 
