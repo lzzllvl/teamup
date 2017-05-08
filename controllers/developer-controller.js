@@ -14,6 +14,13 @@ router.get('/developer/:id', function(req, res) {
   //TODO res.render etc
 });
 
+router.put('/developer/acceptinvite/:id', function(req, res) {
+  db.DeveloperInvite.update();
+  db.ProjectDeveloper.update();
+});
+
+
+
 router.get('/developer/browse', function(req, res) {
   db.Projects.findAll(); //maybe find where needs has developer??
 
@@ -25,7 +32,12 @@ router.get("/developer/browse/:id", function(req, res) {
   //res.render etc
 });
 
+
+//request a
 router.post("/developer/browse/:id", function(req, res) {
   let projID = req.params.id;
   db.DeveloperRequest.create();
 });
+
+
+
