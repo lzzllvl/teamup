@@ -35,10 +35,9 @@ p {
 .grow:hover { transform: scale(1.1); }
 
 .navLogoImg {
-	width:16%;
 	padding-top: 8px;
 	padding-bottom: 5px;
-		position: absolute;
+	position: absolute;
 
 }
 
