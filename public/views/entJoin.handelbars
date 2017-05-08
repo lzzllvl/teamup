@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <form id="entJoinForm">
+        <h2>Just a few more questions...</h2>
+            <hl>
+        <h3>Social Media Links</h3>
+            <input type="text" placeholder="Linkedin Link" name="social">
+        <h3>Contact Information</h3>
+            <input type="text" placeholder="E-mail" name="email">
+        <h3>Bio - Description</h3>
+            <input type="text" class="big-text">
+    </form>
+</div>
