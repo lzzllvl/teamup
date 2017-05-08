@@ -1,3 +1,5 @@
+<<<<<<< HEAD:public/views/index.handelbars
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,6 +55,7 @@
 				  </div>
 				</nav>
 			</header>
+>>>>>>> master:public/index.html
 	<!-- text over header image -->
 			<div class="text-center homepage">
 				<span class="homepageText"><h1 class="jumbotron homepageTextDiv">Hello There. <br>Welcome to TeamUp!</h1></span>
@@ -117,6 +120,8 @@
 		</div>
 
 </div>
+<<<<<<< HEAD:public/views/index.handelbars
+=======
 
 <footer class="footer">
 		<div class="container">
@@ -173,3 +178,4 @@
 
 </body>
 </html>
+>>>>>>> master:public/index.html
