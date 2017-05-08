@@ -16,9 +16,8 @@ router.get('/developer/:id', function(req, res) {
 
 router.put('/developer/acceptinvite/:id', function(req, res) {
   db.DeveloperInvite.update();
-  db.ProjectDeveloper.update();
+  db.ProjectDeveloper.update();//celtics are losing
 });
-
 
 
 router.get('/developer/browse', function(req, res) {
