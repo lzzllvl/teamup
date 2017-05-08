@@ -34,20 +34,23 @@
     <div class="wrapper">
 <!-- Container for the site is spanning the full width of the window -->
 		<div class="container-fluid topContainer">
+					<div class="container-fluid topContainer homepageBanner">
 			<header class="row">
 				<nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
 				  <div class="container-fluid navbarContainer">
 				    <div class="navbar-header">
-				      <a class="navbar-brand" href="#">Biz Dev</a>
-				        </div>
-                            <ul class="nav navbar-nav navbar-right pullUp">
-                            <li><a href="#">Entrepreneurs</a></li>
-                            <li><a href="#">Developers</a></li>
-                            <li><a href="#">Investors</a></li>
-                            <li><a href="join.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                            </ul>
-				        </div>
+				      <a class="navbar-brand" id='navLogo' href="index.html"><img class="grow navLogoImg" alt="TeamUp logo" src="../assets/images/teamup-small-white-logo.png"> </a>
+				    </div>
+				    <ul class="nav navbar-nav navbar-right pullUp">
+
+				      <li><a class="menuOptions" href="entrepreneur.html">Entrepreneurs</a></li>
+				      <li><a class="menuOptions" href="developer.html">Developers</a></li>
+				      <li><a class="menuOptions" href="investor.html">Investors</a></li>
+				      <li><a class="menuOptions" href="join.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				      <li><a class="menuOptions" href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+				    </ul>
+				  </div>
 				</nav>
 			</header>
             {{{BODY}}}
