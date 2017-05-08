@@ -25,6 +25,28 @@ p {
 	background-color: #26374b;
 }
 
+#navLogo {
+	margin-left: 30px;
+	padding: 0 0;
+
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.navLogoImg {
+	width:16%;
+	padding-top: 8px;
+	padding-bottom: 5px;
+		position: absolute;
+
+}
+
+
+.menuOptions {
+	color: #6dd7fb;
+}
+
 
 .bodyHeaders {
 	font-family: "Nunito";
@@ -42,38 +64,55 @@ p {
 
 
 .homepageText {
-/*	width: 100%;
-	position: relative;
-	display: inline-block;
-	top: 240px;
-	left: 140px;
-	font-size: 3em;
-	*/color: white;
+	color: white;
 }
 
 .homepage {
-	margin-top: 200px;
+	margin-top: 130px;
 }
 
 .topContainer {
-	height: 750px;
 	position:relative;
 	display: block;
 	width: 100%;
-	background-image: url("assets/images/stock-2.jpeg");
+
+}
+
+.homepageBanner {
+	height: 650px;
+	position:relative;
+	display: block;
+	width: 100%;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+  background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(0, 126, 174, 0.75), 
+      rgba(1, 180, 247, 0.55), 
+      rgba(0, 0, 0, 0.45)
+    ),
+    /* bottom, image */
+    url("../images/stock-2.jpeg");
 }
+
+
+
+
+
+
+
 
 .homepageTextDiv {
 	font-family: "Nunito";
+	font-weight: 700;
 	background: transparent;
 	font-size: 90px;
-	background: -webkit-linear-gradient(#fff, #fff,#1eb2e4);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
+/*	background: -webkit-linear-gradient(#fff, #fff,#1eb2e4);
+/**/	-webkit-background-clip: text;
+*//*	-webkit-text-fill-color: transparent;
+*/}
 
 #secondBigDiv {
 	padding-top: 50px;
@@ -100,6 +139,9 @@ p {
  }
 
 
+
+
+ /*FOOTER CLASSES*/
 #footer {
 	width: 100%;
 	height: 200px;
@@ -108,9 +150,61 @@ p {
 	color: white;
 }
 
+.footer__menu {
+	margin-top: 15px;
+	width: 75%;
+	text-align: right;
+}
+
+
+.topFooterMenuRow {
+	margin-top: 25px;
+}
+
+.footer__menu ul{
+	list-style: aqua;
+}
+
+.footer__menu li{
+	display:inline-block;
+	margin-left:15px;
+}
+
+.footer__menu a, .footer__menu a:visited{
+	color: #26374b;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Nunito', Arial, Helvetica;
+
+	font-size:16px;
+}
+
+.footer__menu a:hover{
+	text-decoration: underline;
+}
+
+
 .footerContent {
 	color: white;
 }
+
+.footerLogo {
+	width: 85%;
+}
+
+.footerSocial {
+	padding-left: 10px;
+}
+
+.footerSocial a {
+	padding-left: 10px;
+}
+
+.footerSocial i {
+	color: #26374b;
+}
+
+
 
 /*NAV BAR ANIMATIONS*/
 /* Pull up  */
@@ -132,9 +226,54 @@ ul.pullUp a:hover:before
     height: 100%;
 }
 
+
 .signup-box 
 {
   border: 1px solid black;
   padding: 20px;
   margin-top: 20px;
 }
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+@media(max-width: 1200px) {
+	.footerLogo {
+		width: 35%;
+	}
+
+	.footer__menu {
+		width: 100%;
+		text-align: left;
+	}
+}
+
+
+@media(max-width: 768px){
+	
+	.nav li {
+		display: inline-block;
+	}
+
+
+
+
+	.footer__menu li{
+		display:block;
+		margin-left:0px;
+	}
+
+	.footer__menu{
+		text-align: left;
+	}
+
+	.footer_nav{
+		padding-left:0px;
+	}
+}
+
