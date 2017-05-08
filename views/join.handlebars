@@ -2,8 +2,8 @@
                 <div class="signup-box">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form role="form" id="investor-sign-up" name="investor-sign-up"
-                                    action="/join/" method="post"
+                            <form action="/join/?_method="post role="form" id="investor-sign-up" name="investor-sign-up"
+                                    "
                                 class="validate form ">
                                     <div >
                                         <h5 style="margin-top: 0">I'd like to:</h5>
@@ -38,7 +38,10 @@
                                             </a>
                                         </div>
                                     </div>
-                <input type='hidden' name='csrfmiddlewaretoken' value='CtiocfJSWsweiv8yodcoiuUffuivG3F1' />                        <h5>Sign up via email</h5>
+                        
+                        
+                                <input type='hidden' name='csrfmiddlewaretoken' value='CtiocfJSWsweiv8yodcoiuUffuivG3F1' />                        
+                                <h5>Sign up via email</h5>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12">
                                         <div class="form-group ">
@@ -83,12 +86,13 @@
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <input type="hidden" name="next" value=""/>
-                                        <button class="btn btn-primary btn-large btn-block submit-button">
+                                        <button class="btn btn-primary btn-large btn-block submit-button" type="submit">
                                             Join Us!
                                         </button>
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
