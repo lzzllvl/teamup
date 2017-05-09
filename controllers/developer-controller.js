@@ -7,6 +7,7 @@ const router = express.Router();
 //developer dashboard
 router.get('/developer/:id', function(req, res) {
   let devID = req.params.id;
+
   db.Developer.findOne()
   db.ProjectDeveloper.findAll()
   db.DeveloperRequests.findAll()
@@ -16,7 +17,7 @@ router.get('/developer/:id', function(req, res) {
 
 router.put('/developer/acceptinvite/:id', function(req, res) {
   db.DeveloperInvite.update();
-  db.ProjectDeveloper.update();//celtics are losing
+  db.ProjectDeveloper.update();
 });
 
 
