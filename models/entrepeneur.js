@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     bio : {
-      type: DataTypes.TEXT('medium'),
-      allowNull: false
+      type: DataTypes.TEXT('medium')
     }
   }, {
-    timestamps: true,
+    timestamps: false,
     classMethods: {
       associate: function(models) {
+        Entrepeneur.belongsTo(models.User);
         // Associating Entrepeneur with Project
         Entrepeneur.hasMany(models.Project, {
           onDelete: "cascade"
