@@ -2,6 +2,11 @@ html {
     line-height: 1.15
 }
 
+.wrapper {
+	background-color: #ececec
+
+}
+
 h1 {
 	font-family: "Bitter";
 	font-size: 40px;
@@ -116,9 +121,7 @@ p {
 #secondBigDiv {
 	padding-top: 50px;
 	padding-bottom: 30px;
-
- background-image: linear-gradient(#fff, #6dd7fb);
- box-shadow: inset 0 0 100px hsla(0,0%,0%,.0);
+background-color: #ececec
  }
 
 #thirdBigDiv {
