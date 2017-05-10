@@ -16,7 +16,7 @@ router.get('/investor/:id', function(req, res) {
 
 router.put('/investor/acceptinvite/:id', function(req, res) {
   db.InvestorInvite.update();
-  db.ProjectInvestor.update();//celtics are losing
+  db.ProjectInvestor.update();
 });
 
 

@@ -1,6 +1,6 @@
 
 
-module.exports = function(passport) {
+module.exports = function(passport, LocalStrategy) {
 
     passport.serializeUser(function(user, done) {
       done(null, user.id);
@@ -12,7 +12,7 @@ module.exports = function(passport) {
       });
     }); // if you are using sessions
 
-    passport.use('local-login', new LocalStrategy({
+    passport.use(new LocalStrategy({
       usernameField : 'email',
       passwordField : 'password',
       passReqToCallback : true
@@ -26,12 +26,13 @@ module.exports = function(passport) {
 
        if (!user) return done(null, false);
 
-       if (!user.validPassword(password) {
+       if (!user.validPassword(password)){
          return done(null, false);
        }
 
        else
          return done(null, user); // all good return user
      });
-   });
+   })
+ )
 };

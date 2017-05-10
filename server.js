@@ -4,9 +4,8 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const passport = require('passport');
-
-//Passport 
-//require('./config/passport.js')(passport);
+const LocalStrategy = require('passport-local').Strategy;
+const session = require('express-session');
 
 
 const PORT = process.env.PORT || 8080;
@@ -28,11 +27,22 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//Passport initialize 
-app.use(passport.initialize())
-//Passport routes
-//var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
-//app.use('/users', usersRoutes);
+//use express-session
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+ }));
+
+//Passport initialize
+
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/strategy.js')(passport, LocalStrategy);
+
+// //Passport routes
+// var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
+// app.use('/users', usersRoutes);
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
