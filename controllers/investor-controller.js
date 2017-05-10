@@ -1,42 +1,48 @@
-const express = require('express');
-const db = require('../models');
 
-//define express router
-const router = express.Router();
+module.exports = function(router, db) {
+  //investor dashboard
+  router.get('/investor/:id', function(req, res) {
+    let invID = req.params.id;
+    db.Investor.find({
+      where: {
+        id: invID
+      },
+      include : [
+        db.User,
+        db.ProjectInvestor,
+        db.InvestorRequest,
+        db.InvestorInvite ]
+    }).then(function(data) {
+      console.log(data);
 
-//investor dashboard
-router.get('/investor/:id', function(req, res) {
-  let devID = req.params.id;
-  db.Investor.findOne()
-  db.ProjectInvestor.findAll()
-  db.InvestorRequests.findAll()
-  db.InvestorInvites.findAll()
-  //TODO res.render etc
-});
+      res.end();
+    })
+  });
 
-router.put('/investor/acceptinvite/:id', function(req, res) {
-  db.InvestorInvite.update();
-  db.ProjectInvestor.update();
-});
-
-
-router.get('/investor/browse', function(req, res) {
-  db.Projects.findAll(); //maybe find where needs has investor??
-
-});
-
-router.get("/investor/browse/:id", function(req, res) {
-  let projID = req.params.id;
-  db.Project.findOne();
-  //res.render etc
-});
+  router.put('/investor/acceptinvite/:id', function(req, res) {
+    db.InvestorInvite.update();
+    db.ProjectInvestor.update();
+  });
 
 
-//request a
-router.post("/investor/browse/:id", function(req, res) {
-  let projID = req.params.id;
-  db.InvestorRequest.create();
-});
+  router.get('/investor/browse', function(req, res) {
+    db.Projects.findAll();
+
+  });
+
+  router.get("/investor/browse/:id", function(req, res) {
+    let projID = req.params.id;
+    db.Project.findOne();
+    //res.render etc
+  });
 
 
+  //request a
+  router.post("/investor/browse/:id", function(req, res) {
+    let projID = req.params.id;
+    let invID = req.body.id;
+    db.InvestorRequest.create();
+  });
+
+}
 

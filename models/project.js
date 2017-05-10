@@ -58,23 +58,29 @@ module.exports = (sequelize, DataTypes) => {
       classMethods: {
         associate: function(models) {
           // Associating Developer with Invite and requests
-          Project.hasMany(models.Developer, {
-            onDelete: "cascade"
+          Project.hasMany(models.ProjectDeveloper, {
+            onDelete: "cascade",
+            constraints: false
           });
-          Project.hasMany(models.Investor, {
-            onDelete: "cascade"
+          Project.hasMany(models.ProjectInvestor, {
+            onDelete: "cascade",
+            constraints: false
           });
           Project.hasMany(models.DeveloperInvite, {
-            onDelete: "cascade"
+            onDelete: "cascade",
+            constraints: false
           });
           Project.hasMany(models.DeveloperRequest, {
-            onDelete: "cascade"
+            onDelete: "cascade",
+            constraints: false
           });
           Project.hasMany(models.InvestorInvite, {
-            onDelete: "cascade"
+            onDelete: "cascade",
+            constraints: false
           });
           Project.hasMany(models.InvestorRequest, {
-            onDelete: "cascade"
+            onDelete: "cascade",
+            constraints: false
           });
         }
       }

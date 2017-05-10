@@ -14,10 +14,15 @@ module.exports = (sequelize, DataTypes) => {
         Investor.belongsTo(models.User);
         // Associating Investor with Invite and requests
         Investor.hasMany(models.InvestorInvite, {
-          onDelete: "cascade"
+          onDelete: "cascade",
+          constraints: false
         });
         Investor.hasMany(models.InvestorRequest, {
-          onDelete: "cascade"
+          onDelete: "cascade",
+          constraints: false
+        });
+        Investor.hasMany(models.ProjectInvestor, {
+          constraints: false
         });
       }
     }
