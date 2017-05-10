@@ -15,12 +15,16 @@ module.exports = (sequelize, DataTypes) => {
         // Associating Developer with Invite and requests
         Developer.belongsTo(models.User);
 
-
         Developer.hasMany(models.DeveloperInvite, {
-          onDelete: "cascade"
+          onDelete: "cascade",
+          constraints: false
         });
         Developer.hasMany(models.DeveloperRequest, {
-          onDelete: "cascade"
+          onDelete: "cascade",
+          constraints: false
+        });
+        Developer.hasMany(models.ProjectDeveloper, {
+          constraints: false
         });
       }
     }
