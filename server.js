@@ -3,9 +3,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
+const passport = require('passport');
 
 //Passport 
-require('./config/passport.js')(passport);
+//require('./config/passport.js')(passport);
 
 
 const PORT = process.env.PORT || 8080;
@@ -30,8 +31,8 @@ app.set("view engine", "handlebars");
 //Passport initialize 
 app.use(passport.initialize())
 //Passport routes
-var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
-app.use('/users', usersRoutes);
+//var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
+//app.use('/users', usersRoutes);
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
