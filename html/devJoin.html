@@ -1,10 +1,6 @@
 <div class="wrapper">
-
-
-
-    <form action=""
-        method="POST" id="entJoinForm">
-
+    <form action="/{{this.developer}?_method=GET"
+        method="POST" id="devJoinForm">
         <h2>Just a few more questions...</h2>
             <hl>
         <h3>Social Media Links</h3>
@@ -12,8 +8,12 @@
         <h3>Contact Information</h3>
             <input type="text" placeholder="E-mail" name="email">
         <h3>Bio - Description</h3>
-            <input type="text" class="big-text">
+            <input type="text" class="big-text" id="desc"placeholder="Description...">
+        <h3>Resume</h3>
+            <input type="text" id="resume" placeholder="Resume Link">
+        <h3>Portfolio Website</h3>
+            <input type="text" id="portfolio" placeholder="Portfolio Link">
+            <br>
             <button class="btn btn-primary btn-large btn-block submit-button" type="submit">Submit</button>
     </form>
-
 </div>

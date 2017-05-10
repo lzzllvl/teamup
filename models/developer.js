@@ -1,28 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   var Developer = sequelize.define('Developer', {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    social: {
-      type: DataTypes.STRING
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    phone: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    location: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    bio: {
-      type: DataTypes.TEXT('medium'),
-      allowNull: false
-    },
     skills: {
       type: DataTypes.TEXT,
       allowNull: false
@@ -31,12 +8,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: false
     }
-
   }, {
-    timestamps: true,
+    timestamps: false,
     classMethods: {
       associate: function(models) {
         // Associating Developer with Invite and requests
+        Developer.belongsTo(models.User);
+
+
         Developer.hasMany(models.DeveloperInvite, {
           onDelete: "cascade"
         });
