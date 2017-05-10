@@ -82,7 +82,13 @@ p {
 
 }
 
+.container-fluid {
+	padding: 0;
+}
 .homepageBanner {
+	
+	padding: 0px;
+	margin-top: 0; 
 	height: 650px;
 	position:relative;
 	display: block;
@@ -101,6 +107,11 @@ p {
     url("../images/stock-2.jpeg");
 }
 
+
+.navbarContainer {
+	padding-right: 25px;
+	padding-left: 25px;
+}
 
 
 
