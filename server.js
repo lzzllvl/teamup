@@ -8,7 +8,6 @@ const LocalStrategy = require('passport-local').Strategy;
 const session = require('express-session');
 
 
-
 const PORT = process.env.PORT || 8080;
 const app = express();
 
