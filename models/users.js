@@ -1,3 +1,5 @@
+const bcrypt = require('bcrypt');
+
 module.exports = (sequelize, DataTypes) => {
   var User = sequelize.define('User', {
     name: {
@@ -18,17 +20,36 @@ module.exports = (sequelize, DataTypes) => {
     },
     phone: {
       type: DataTypes.STRING,
-      allowNull: false
+
     },
     location: {
       type: DataTypes.STRING,
-      allowNull: false
+
     },
     bio: {
       type: DataTypes.TEXT('medium'),
-      allowNull: false
+
     }
   },
-  {timestamps: true});
+  {timestamps: false});
+  
+  User.setPassword = function(raw, done) {
+    let encryptedPassword = bcrypt.hashSync(raw, 10)//sync for ease's sake
+    this.password = ecryptedPassword;
+    done(false, this);
+  };
+
+  User.comparePassword = function(raw, hash, done) {
+    return done(false, bcrypt.compareSync(raw, hash));
+  };
   return User;
 }
+
+
+// setPassword: function(raw, done) {}
+// comparePassword: function(raw, done) {}
+
+// db.User.setPassword('myPassword', function(err, user) {
+// if (!err)
+//   user.save();
+// })

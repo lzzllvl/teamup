@@ -27,7 +27,7 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-//use express-session
+// //use express-session
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
@@ -38,11 +38,16 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
-require('./config/strategy.js')(passport, LocalStrategy);
+require('./config/strategy.js')(passport, LocalStrategy, db.User);
 
 // //Passport routes
 // var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
 // app.use('/users', usersRoutes);
+const router = app.Router();
+
+
+app.use('/', router);
+
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {

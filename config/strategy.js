@@ -1,10 +1,10 @@
 
-
-module.exports = function(passport, LocalStrategy) {
-
+module.exports = function(passport, LocalStrategy, User) {
     passport.serializeUser(function(user, done) {
-      done(null, user.id);
+        done(null, user.id);
     }); // if you are using sessions
+
+
 
     passport.deserializeUser(function(id, done) {
       User.findById(id, function(err, user) {
@@ -12,27 +12,28 @@ module.exports = function(passport, LocalStrategy) {
       });
     }); // if you are using sessions
 
+
+
     passport.use(new LocalStrategy({
-      usernameField : 'email',
-      passwordField : 'password',
-      passReqToCallback : true
-   },
-   function(req, email, password, done) {
+            usernameField : 'email',
+            passwordField : 'password',
+            passReqToCallback : true
+        },
+        function(req, email, password, done) {
 
-     // check password, and return user if successful
-     User.findOne({ 'local.email' : email },
-     function(err, user) {
-       if (err) return done(err);
-
-       if (!user) return done(null, false);
-
-       if (!user.validPassword(password)){
-         return done(null, false);
-       }
-
-       else
-         return done(null, user); // all good return user
-     });
-   })
- )
+        // check password, and return user if successful
+        User.findOne({
+            where : { email : email }
+        }).done(function(user) {
+            if(!user) {
+                return done(null, false);
+            }
+            User.comparePassword(password, user.password, (err, res) => {
+              if(!err)
+                return res ? done(null, user): done(null, false);
+              else
+                throw err;
+            });
+        });
+    }));
 };
