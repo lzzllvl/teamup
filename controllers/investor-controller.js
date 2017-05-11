@@ -8,7 +8,6 @@ module.exports = function(router, db) {
         id: invID
       },
       include : [
-
         db.ProjectInvestor ]
     }).then(function(data) {
       console.log(data);
@@ -27,6 +26,5 @@ module.exports = function(router, db) {
     let invID = req.body.id;
     db.InvestorRequest.create();
   });
-
 }
 
