@@ -13,78 +13,159 @@
 
 
 	<!-- Icons -->
-	<link href="assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../public/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
+
+	<!-- info page CSS -->
+	<link rel="stylesheet" type="text/css" href="../public/assets/css/infopage.css">
 
 	<!-- GOOGLE FONTS: Nunito and Bitter -->
-	<link href="https://fonts.googleapis.com/css?family=Bitter|Nunito:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
 	<!-- jQuery -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<!-- Javascript -->
 
-	<title>TeamUp</title>
+	<title>Team Up</title>
 
 </head>
 <body>
-<div class="wrapper">
+    <div class="wrapper">
 <!-- Container for the site is spanning the full width of the window -->
 		<div class="container-fluid topContainer">
 			<header class="row">
 				<nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
 				  <div class="container-fluid navbarContainer">
 				    <div class="navbar-header">
-				      <a class="navbar-brand pullUp" id='navLogo' href="index.html">TeamUp</a>
+				      <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
 				    </div>
 				    <ul class="nav navbar-nav navbar-right pullUp">
-				      <li><a href="entrepreneur.html">Entrepreneurs</a></li>
-				      <li><a href="developer.html">Developers</a></li>
-				      <li class="active"><a href="investor.html">Investors</a></li>
-				      <li><a href="join.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+				      <li><a class="menuOptions" href="entrepreneur.html">Entrepreneurs</a></li>
+				      <li><a class="menuOptions" href="developer.html">Developers</a></li>
+				      <li><a class="menuOptions" href="investor.html">Investors</a></li>
+				      <li><a class="menuOptions" href="join.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				      <li><a class="menuOptions" href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
 				    </ul>
 				  </div>
 				</nav>
 			</header>
-	<!-- text over header image -->
-
+<!-- text over header image -->
+			<div class="container-fluid text-center homepage infoPageBannerDiv">
+		<img class="bannerImg" alt="entrepreneur info page banner" src="../public/assets/images/investorinfobanner.jpg">
+			</div>
 
 		<!-- end of top container -->
-		</div> 
+		</div>
+	<div class="container-fluid infoPageSecondBigDiv investorInfoSecondDiv">
+		<div class="row">
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+				<div class="col col-12">
+					<h2 class="infoPageSecondHeader">How TeamUp Works for Investors</h2>
+					<div class="spacer" style="line-height:30px;height:30px;"></div>
+			 	</div>
+		</div>
 
-<!-- end of main wrapper div -->
-</div>
+			<div class="row">
+			 	<div class="col col-sm-offset-1 .col-md-8 col-lg-10">
+					<div class="col col-md-4 text-center"><i class="fa fa-bullhorn fa-5x" aria-hidden="true"></i><h4>1. Find Projects that You Want to Invest In</h4><p class="smallText">Invest in the next big thing. Search for projects that interest you and that you believe in. </p></div>
+					<div class="col col-md-4 text-center"><i class="fa fa-users fa-5x" aria-hidden="true"></i><h4>2. Request to Join Projects</h4><p class="smallText">Once you've identified an idea that you want to invest in, send the entrepreneur of that idea a request to join the project.</p></div>
+					<div class="col col-md-4 text-center"><i class="fa fa-rocket fa-5x" aria-hidden="true"></i><h4>3. Invest in the Future</h4><p class="smallText">Every innovative technology today once started as an idea. This is your chance to invest in tomorrow's next big innovation.</p></div>
+			 	</div>
+
+	
 
 
-<!-- text over header image -->
- 			<div class="text-center homepage">
- 				<span class="homepageText"><h1 class="jumbotron homepageTextDiv">Investing in Technology Made Easy.</h1></span>
- 			</div>
+			</div>
+		<div class="spacer" style="line-height:30px;height:30px;"></div>
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
 
-<section class="section section--double-padding text-center">
-  <div class="content content--tall">
-    <div class="heading">
-      <h2 class="heading__title">
-        header to this stuff
-      </h2>
-    </div>
-    <h5 class="p">
-      When you hire us, you’ll work directly with our team of developers
-      and UI/UX designers who are passionate about building products people
-      love. We understand that the <em>details</em> matter and we take the time to
-      understand you and your business. Don’t take our word for it, let us
-      show you.
-    </h5>
 
-    <a class="text-transform--uppercase button button--large button" href="/contact">
-      <span class="button--current-color__text">Get Started Today</span>
-</a>  </div>
 
-</section>
+	</div>
 
+	<div class="container-fluid infoPageThirdBigDiv investorInfoThirdDiv">
+		<div class="row">
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+			<img class="trioImg" src="../public/assets/images/trio.jpg" alt="icon of entrepreneur, developer, investor">
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+		</div>
+
+	</div>
+	<div class="container-fluid infoPageFourthBigDiv investorInfoFourthDiv">
+		<div class="container">
+		<div class="row">
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+			<h2>Start Investing in the Future</h2>
+			<p>We believe in empowering those that want to change the world. That's why signing up for TeamUp is free. Sign up for a free investor account, and invest in the next big thing!</p>
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+			<button class="btn infoPageSignUpButton">SIGN UP</button>
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+			<div class="spacer" style="line-height:30px;height:30px;"></div>
+		</div>
+
+	</div>
+	</div>
+
+
+<!-- END OF WRAPPER DIV -->
+	</div> 
+
+            <footer class="footer">
+		<div class="container">
+			<div class="row topFooterMenuRow">
+				<div class="col-lg-3 col-xs-12 navLogo">
+					<img class="grow footerLogo" alt="TeamUp logo dark" src="../public/assets/images/teamup-dark-blue-logo.png">
+				</div>
+
+				<div class="col-lg-9 col-xs-12 footer__menu">
+					<div class="footerLinks">
+						<ul class="footer_nav">
+							<li><a href="entrepreneur.html">For Entrepreneurs</a> |</li>
+							<li><a href="developer.html">For Developers</a> |</li>
+							<li><a href="investor.html">For Investors</a> |</li>
+							<li><a href="about.html">About</a> |</li>
+							<li><a href="contact.html">Contact Us</a> |</li>
+						</ul>
+					</div>				
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<hr>
+				</div>
+			</div>
+
+			<div class="row bottomFooterRow">
+				<div class="col-lg-3">
+					<ul class="footerSocial">
+						<a href="https://facebook.com/teamup" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+						<a href="https://linkedin.com/in/teamup" target="_blank"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/teamup" target="_blank"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+					</ul>
+				</div>
+				
+				<div class="col-lg-9 footer__disclaimer">
+					<p>
+						TeamUp is a global technology company on a mission to bring app ideas to life by connecting entrepreneurs, developers, and investors. 
+					</p>
+					<p>
+						© Copyright 2017 TeamUp, Inc. All rights reserved. | 
+						<a href="/privacy/">Privacy Statement</a>
+					</p>
+					<br> <br>
+				</div>
+			</div>
+		</div>
+		
+
+</footer>
+		
 </body>
 </html>

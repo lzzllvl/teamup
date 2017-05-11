@@ -1,5 +1,5 @@
 html {
-    line-height: 1.15
+    line-height: 1.45
 }
 
 .wrapper {
@@ -11,6 +11,10 @@ h1 {
 	font-family: "Bitter";
 	font-size: 40px;
 	padding-bottom: 20px;
+}
+
+h2 {
+
 }
 
 i:hover {
@@ -27,12 +31,15 @@ p {
 	border-radius: 0px;
 	color: black;
 	margin-bottom:0px;
-	background-color: #26374b;
+	background-color: #152b45;
+		vertical-align: middle;
 }
 
 #navLogo {
+	width: 14%;
 	margin-left: 30px;
 	padding: 0 0;
+	vertical-align: middle;
 
 }
 
@@ -43,7 +50,16 @@ p {
 	padding-top: 8px;
 	padding-bottom: 5px;
 	position: absolute;
+		vertical-align: middle;
 
+}
+
+.navbar-brand {
+	padding-top: 10px;
+}
+
+.navbar-right {
+	margin-right: 0px;
 }
 
 
@@ -113,10 +129,27 @@ p {
 	padding-left: 25px;
 }
 
+.infoPageBannerDiv {
+	
+	padding: 0px;
+	margin-top: 0; 
 
+	position:relative;
+	display: block;
+	max-width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    
+}
 
-
-
+.bannerImg {
+	width: 100%;
+		max-width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 
 
 .homepageTextDiv {
@@ -159,7 +192,7 @@ background-color: #ececec
 	width: 100%;
 	height: 200px;
 	position: absolute;
-	background-color: #26374b;
+	background-color: #152b45;
 	color: white;
 }
 
@@ -184,7 +217,7 @@ background-color: #ececec
 }
 
 .footer__menu a, .footer__menu a:visited{
-	color: #26374b;
+	color: #152b45;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: 'Nunito', Arial, Helvetica;
@@ -214,7 +247,7 @@ background-color: #ececec
 }
 
 .footerSocial i {
-	color: #26374b;
+	color: #152b45;
 }
 
 
