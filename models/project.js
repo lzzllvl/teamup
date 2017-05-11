@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER(8)
       },
       offer_to_developer: {
-        type: DataTypes.DECIMAL
+        type: DataTypes.INTEGER(3)
       },
       offer_from_developer: {
         type: DataTypes.INTEGER(8)
@@ -54,7 +54,7 @@ module.exports = (sequelize, DataTypes) => {
       // }
     },
     {
-      timestamps: true,
+      timestamps: false,
       classMethods: {
         associate: function(models) {
           // Associating Developer with Invite and requests
