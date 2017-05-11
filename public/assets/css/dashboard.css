@@ -1,0 +1,51 @@
+ .allcontainers {
+ 		height: 650px;
+ 		font-size: 20px
+ 		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		align-content: center;
+		text-align: center;
+
+		width: 100%;	
+}
+
+h1 {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+h3 {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+
+#project {
+
+		background-color: #ececec;
+		align-content: center;
+		text-align: center;
+}
+
+#developer {
+
+		background-color: #F0FFFF;
+		align-content: center;
+		text-align: center;
+}
+
+#investor {
+
+		background-color: #FFFAF0;
+		align-content: center;
+		text-align: center;
+}
+
+div.row {
+    border: 1px solid;
+    border-bottom: 0px;
+}
+.container div.row:last-child {
+    border-bottom: 1px solid;
+}
