@@ -1,0 +1,72 @@
+.infoPageSecondHeader {
+	text-align: center;
+}
+
+.infoPageSecondBigDiv {
+background-image: 
+linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(104, 215, 251, 0.7) 100%), linear-gradient(-45deg, #494d71 0%, rgba(1, 230, 185, 0.5) 80%);
+}
+
+
+.investorInfoSecondDiv {
+	background-image: 
+linear-gradient(45deg, rgba(194, 233, 195, 0.7) 1%, rgba(188, 251, 104, 0.7) 100%), linear-gradient(-45deg, #ffffff 0%, rgba(1, 230, 185, 0.5) 80%)
+}
+
+.devInfoPageSecondDiv {
+	background-image: 
+	linear-gradient(45deg, rgba(194, 233, 221, 0.5) 1%, rgba(214, 245, 255, 0.7) 100%), linear-gradient(-45deg, #494d71 0%, #ffffff 80%);
+}
+
+
+.smallText {
+	font-size: 14px;
+}
+
+i:hover {
+	color: #fff;
+}
+
+.infoPageThirdBigDiv {
+	text-align: center;
+	background-color: white;
+}
+
+.investorInfoThirdDiv {
+
+}
+
+.trioImg {
+
+	width: 35%;
+}
+
+.infoPageFourthBigDiv {
+	text-align: center;
+	color: white;
+background-image: 
+linear-gradient(45deg, rgba(255, 143, 47, 0.7) 1%, rgba(251, 215, 251, 0.7) 100%), linear-gradient(-45deg, #494d71 0%, rgba(255, 244, 18, 0.5) 80%);
+}
+
+.investorInfoFourthDiv {
+background-image: 
+linear-gradient(45deg, rgba(255, 143, 47, 0.7) 1%, rgba(251, 215, 251, 0.7) 100%), linear-gradient(-45deg, #494d71 0%, rgba(255, 244, 18, 0.5) 80%);
+}
+
+.infoPageSignUpButton {
+	color: white;
+	font-size: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: "nunito";
+	background-color: #26374b;
+}
+
+.infoPageSignUpButton:hover {
+	color: #26374b;
+	font-size: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: "nunito";
+	background-color: #4ccfff;
+}
