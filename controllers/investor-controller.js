@@ -8,10 +8,7 @@ module.exports = function(router, db) {
         id: invID
       },
       include : [
-        db.User,
-        db.ProjectInvestor,
-        db.InvestorRequest,
-        db.InvestorInvite ]
+        db.ProjectInvestor ]
     }).then(function(data) {
       console.log(data);
 
