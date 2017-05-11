@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#projectsDash">Dashboard</a></li>
+    <li><a data-toggle="tab" href="#proTab">Project</a></li>
+    <li><a data-toggle="tab" href="#devTab">Developer</a></li>
+    <li><a data-toggle="tab" href="#invTab">Investor</a></li>
+  </ul>
+
+  <div class="tab-content">
+
+    <div id="project" class="tab-pane fade in active">
+      <h3>Projects</h3>
+          <div>
+              {{#each project}}}
+                <a href="/project/{{id}}"> <ul>
+                  <li>{{project_name}}</li>
+                  <li>{{project_description}}</li>
+                  <li>{{needs_developer}}</li>
+                  <li>{{needs_investor}}</li>
+                  <li>{{offer_developer}}</li>
+                  <li>{{offer_to_developer}}</li>
+                  <li>{{offer_investor}}</li>
+                  <li>{{offer_to_developer}}</li>
+                  <li>{{offer_to_investor}}</li>
+                  <li>{{project_scope}}</li>
+                  <li>{{project_industry}}</li>
+                </ul>
+                </a>
+              {{/each}}
+          </div>
+    </div>
+    <div id="developer" class="tab-pane fade">
+      <h3>Developer</h3>
+          <div>
+              {{#each developer}}}
+              <a href="/developer/{{id}}">   
+                <ul>
+                    <li>{{developer_name}}</li>
+                    <li>{{skills}}</li>
+                    <li>{{experience}}</li>
+                </ul>
+              {{/each}}
+              </a>
+          </div>
+    </div>
+    <div id="investor" class="tab-pane fade">
+      <h3>Investor</h3>
+          <div>
+            <a href="/investor/{{id}}"> 
+              {{#each developer}}}
+                <ul>
+                    <li>{{investor_name}}</li>
+                    <li>{{investor_minimum}}</li>
+                    <li>{{investor_maximum}}</li>
+                </ul>
+              {{/each}}
+              </a>
+          </div>
+      
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
