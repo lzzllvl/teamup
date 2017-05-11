@@ -45,7 +45,6 @@ require('./config/strategy.js')(passport, LocalStrategy, db.User);
 // app.use('/users', usersRoutes);
 const router = app.Router();
 
-//investor dashboard
 
 app.use('/', router);
 

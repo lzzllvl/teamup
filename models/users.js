@@ -32,16 +32,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   },
   {timestamps: false});
-
+  
   User.setPassword = function(raw, done) {
-    // todo: encrypt it
+    let encryptedPassword = bcrypt.hashSync(raw, 10)//sync for ease's sake
     this.password = ecryptedPassword;
     done(false, this);
-  }
+  };
 
-  User.comparePassword = function(raw, done) {
-    
-  }
+  User.comparePassword = function(raw, hash, done) {
+    return done(false, bcrypt.compareSync(raw, hash));
+  };
   return User;
 }
 
