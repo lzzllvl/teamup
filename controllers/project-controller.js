@@ -14,8 +14,8 @@ module.exports = function(router, db) {
     let invID = req.body.id;
 
     //need to find user type before
-    db.DeveloperInvite.create();
+    db.DeveloperRequest.create();
     //OR
-    db.InvestorInvite.create();
+    db.InvestorRequest.create();
   });
 }
