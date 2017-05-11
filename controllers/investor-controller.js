@@ -8,10 +8,7 @@ module.exports = function(router, db) {
         id: invID
       },
       include : [
-        db.User,
-        db.ProjectInvestor,
-        db.InvestorRequest,
-        db.InvestorInvite ]
+        db.ProjectInvestor]
     }).then(function(data) {
       console.log(data);
 
@@ -19,26 +16,12 @@ module.exports = function(router, db) {
     })
   });
 
-  router.put('/investor/acceptinvite/:id', function(req, res) {
-    db.InvestorInvite.update();
-    db.ProjectInvestor.update();
-  });
-
-
   router.get('/investor/browse', function(req, res) {
-    db.Projects.findAll();
-
+    db.Investor.findAll();
   });
 
-  router.get("/investor/browse/:id", function(req, res) {
-    let projID = req.params.id;
-    db.Project.findOne();
-    //res.render etc
-  });
-
-
-  //request a
-  router.post("/investor/browse/:id", function(req, res) {
+  //invite an investor
+  router.post("/investor/:id", function(req, res) {
     let projID = req.params.id;
     let invID = req.body.id;
     db.InvestorRequest.create();

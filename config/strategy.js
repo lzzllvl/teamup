@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 
 module.exports = function(passport, LocalStrategy, User) {
     passport.serializeUser(function(user, done) {
@@ -29,8 +28,11 @@ module.exports = function(passport, LocalStrategy, User) {
             if(!user) {
                 return done(null, false);
             }
-            bcrypt.compare(password, user.password, (err, res) => {
-              return res ? done(null, user): done(null, false);
+            User.comparePassword(password, user.password, (err, res) => {
+              if(!err)
+                return res ? done(null, user): done(null, false);
+              else
+                throw err;
             });
         });
     }));
