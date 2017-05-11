@@ -7,40 +7,27 @@ module.exports = function(router, db){
       where: {
         id: invID
       },
-      include : [
-        db.User,
-        db.ProjectDeveloper,
-        db.DeveloperRequest,
-        db.DeveloperInvite ]
+      include: [
+        db.ProjectDeveloper ]
     }).then(function(data) {
       console.log(data);
       res.end();
     })
   });
 
-  router.put('/developer/acceptinvite/:id', function(req, res) {
-    db.DeveloperInvite.update();
-    db.ProjectDeveloper.update();
-  });
-
-
   router.get('/developer/browse', function(req, res) {
-    db.Projects.findAll(); //maybe find where needs has developer??
-
+    db.Developer.findAll();
   });
 
   router.get("/developer/browse/:id", function(req, res) {
-    let projID = req.params.id;
-    db.Project.findOne();
+    let devID = req.params.id;
+    db.Developer.findOne();
     //res.render etc
   });
 
-
-  //request a
+  //invite a developer
   router.post("/developer/browse/:id", function(req, res) {
-    let projID = req.params.id;
+    let devID = req.params.id;
     db.DeveloperRequest.create();
   });
-
-
 }

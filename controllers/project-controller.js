@@ -12,6 +12,13 @@ module.exports = function(router, db) {
   router.post("/project/:id", function(req, res) {
     let projID = req.params.id;
     let invID = req.body.id;
+<<<<<<< HEAD
+=======
+
+    //need to find user type before
+    db.DeveloperInvite.create();
+    //OR
+>>>>>>> master
     db.InvestorInvite.create();
   });
 }
