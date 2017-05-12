@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-
 // Static directory
+
 app.use(express.static(process.cwd() + "/public"));
 
 //methodOverride to support ReST methods

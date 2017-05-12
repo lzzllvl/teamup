@@ -35,9 +35,9 @@
               {{#each developer}}
               <a href="/developer/{{id}}">
                 <ul>
-                    <{{developer_name}}
-                    <{{skills}}
-                    <{{experience}}
+                    <li>{{developer_name}}</li>
+                    <li>{{skills}}</li>
+                    <li>{{experience}}</li>
                 </ul>
               {{/each}}
               </a>
@@ -51,9 +51,9 @@
             <a href="/investor/{{id}}">
               {{#each developer}}
                 <ul>
-                    {{investor_name}}
-                    {{investor_minimum}}
-                    {{investor_maximum}}
+                    <li>{{investor_name}}</li>
+                    <li>{{investor_minimum}}</li>
+                    <li>{{investor_maximum}}</li>
                 </ul>
               {{/each}}
               </a>

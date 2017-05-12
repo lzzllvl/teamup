@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="dashboard.css" type="text/css"></link>
+
+    </head>
+    <body>
+
+    <!-- Table -->
+    <div class="container">  
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+              
+        <span class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default active">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+            <br>
+      	Email Invite
+            </button>
+        </div>
+          <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
+            <br>
+      	Screen Live
+            </button>
+        </div>
+          
+          <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+            <br>
+      	Survey Link
+            </button>
+        </div>
+          </span>
+        </div>
+          
+      <!-- Form -->
+        <!-- <div class="panel-body">   -->
+
+            <form class="form-horizontal" role="form">
+              <!-- <fieldset> -->
+
+              <div class="col-xs-offset-1 col-xs-10" id="legenddiv">
+                <legend class="legend">GROW  MY  TEAM</legend>
+              </div>
+
+            <div class="container">
+<!--                 <h2>Collapsible Panel</h2> -->
+               <!-- <div class="row"> -->
+                <div class="panel-group">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Select a Team Member</a>
+                      </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                      <div class="panel-body">Panel Body</div>
+                      <div class="panel-footer">Panel Footer</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+                
+                <div class="form-group">
+                   <div class="col-xs-offset-4 col-xs-3">
+                     <button class="btn btn-primary btn-large btn-block submit-button" id="invitebutton" type="submit">Invite</button>
+                   </div>
+               </div>
+                
+              <!-- </fieldset> -->
+            </form>
+        <!-- </div> -->
+    </div>  
+    <!-- /Form -->
+
+    </body>
+</html>

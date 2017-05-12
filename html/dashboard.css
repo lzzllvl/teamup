@@ -27,3 +27,20 @@ h1 {
 
 		background-color: 	#FFFAF0
 }
+
+#invitebutton {
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+#legend {
+	letter-spacing: 1em;
+	display: block;
+	text-align: center;
+
+}
+
+#legenddiv {
+	letter-spacing: 1em;
+	
+}
