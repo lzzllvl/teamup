@@ -40,16 +40,19 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./config/strategy.js')(passport, LocalStrategy, db.User);
 
-// //Passport routes
-// var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
-// app.use('/users', usersRoutes);
-// const router = app.Router();
-//
-//
-// app.use('/', router);
 
 
-db.sequelize.sync({force: true}).then(function() {
+const router = express.Router();
+require('./controllers/project-controller.js')(router, db);
+require('./controllers/investor-controller.js')(router, db);
+require('./controllers/developer-controller.js')(router, db);
+require('./controllers/entrepeneur-controller.js')(router, db);
+require('./controllers/user-controller.js')(router, db);
+
+app.use('/', router);
+
+
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
