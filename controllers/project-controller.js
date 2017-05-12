@@ -1,11 +1,21 @@
 module.exports = function(router, db) {
 
   router.get('/project/browse', function(req, res) {
-    db.Project.findAll();
+    db.Project.findAll().done(function(rows){
+      console.log(rows);
+      res.end();
+    });
   });
 
   router.get("/project/:id", function(req, res) {
-    db.Project.FindOne()
+    db.Project.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).done(function(record) {
+      console.log(record);
+      res.end();
+    })
   });
 
 
