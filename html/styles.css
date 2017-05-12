@@ -250,12 +250,13 @@ ul.pullUp a:hover:before
     height: 100%;
 } 
 
-
+/*profileCreation CSS*/
 .signup-box {
   border: 1px solid black;
   padding: 20px;
   margin-top: 20px;
   text-align: center;
+  background-color: #ececec;
 }
 
 .box {

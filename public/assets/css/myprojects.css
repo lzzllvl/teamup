@@ -1,0 +1,63 @@
+div, a, ul, li, nav, header, footer {
+/*	border: 1px solid red;
+*/}
+
+.createNewProjectBtn {
+	float: right;
+	background-color: #152b45;
+	color: white;
+
+}
+
+.createNewProjectBtn:hover {
+	color: #152b45;
+	background-color: #fff;
+	border: 1.5px solid #152b45;
+}
+
+
+.projectContainer {
+	background-color: rgba(204,204,204,0.2);
+
+}
+
+.projectContainer {
+	background-color: rgba(204,204,204,0.1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+
+.projectContainer:hover {
+	background-color: rgba(204,204,204,0);
+}
+
+.oneProject {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.oneProject:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.projectName {
+	
+	font-size: 26px;
+	font-family: 'bitter';
+	text-decoration: none;
+}
+
+.projectName:hover {
+	text-decoration: none!important;
+	color: #6dd7fb;
+}
+
+.smallText {
+	font-size: 15px;
+}
+
+.viewProjectBtn {
+	float: right;
+	background-color: #152b45;
+	color: white;
+
+}

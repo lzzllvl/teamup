@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+	
+	<meta content="TeamUp | For Entrepreneurs, Developers, & Investors" property="og:title">
+	
+	<meta content="https://www.teamup.com/" property="og:url">
+	<meta content="Online platform for Entrepreneurs, Developers, & Investors to team up on business and app ideas." property="og:description">
+	<meta content="summary" property="twitter:card">
+	<meta content="@team_up" property="twitter:site">
+
+
+	<!-- Icons -->
+	<link href="../public/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
+
+	<!-- general profile page CSS -->
+	<link rel="stylesheet" type="text/css" href="../public/assets/css/profile.css">
+
+	<!-- ent profile page CSS -->
+	<link rel="stylesheet" type="text/css" href="../public/assets/css/createproject.css">
+
+	<!-- GOOGLE FONTS: Nunito and Bitter -->
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!-- Javascript -->
+
+	<title>Team Up</title>
+
+</head>
+<body>
+<div class="wrapper">
+<!-- Container for the site is spanning the full width of the window -->
+	<div class="container-fluid topContainer">
+		<header class="row">
+			<nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
+			  <div class="container-fluid navbarContainer">
+			    <div class="navbar-header">
+			      <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
+			    </div>
+			    <ul class="nav navbar-nav navbar-right pullUp">
+
+			      <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
+			      <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
+			      <li><a class="menuOptions" href="connections.html">My Connections</a></li>
+			      <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+
+			    </ul>
+			  </div>
+			</nav>
+		</header>
+	<!-- end of top container -->
+	</div>
+	
+	<!-- Form to create project -->
+	<div class="container createProjectContainer">
+		<div class="row">
+			<div class="col col-12">
+				<div class="createProjectDiv">
+			        <form class="signup-box createProjectForm" id="devJoinForm">
+			            <h2>Create a New Project</h2>
+			            <h3>Project Name</h3>
+			                <input class="textInput" type="text" id="project_name" placeholder="Ex. Coffee and Collaboration">
+			            <h3>Industry</h3>
+			                <input class="textInput" type="text" id="project_industry" placeholder="Ex. eCommerce">
+			            <h3>Describe the Project</h3>
+			                <textarea  class="big-text textInput" id="project_description" placeholder="Describe your idea in full detail"></textarea>
+			            <h3>What Does Your Project Need?</h3>
+			               	<input type="checkbox" name="developer" id="needs_developer" value="developer">Developers<br>
+  							<input type="checkbox" name="investor" id="needs_investor" value="investor">Investors
+  						<h3>What is the Scope of the Project?</h3>
+			                <textarea  class="big-text textInput" id="project_scope" placeholder="Detail what your project needs"></textarea>
+			            <h3>What Are You Offering?</h3>
+			            <p>Offer to Developers</p>
+			                <input class="textInput" type="text" id="offer_to_developer" placeholder="How much money or equity will you offer?"><br><br>
+			            <p>Offer to Investors</p>
+			                <input class="textInput" type="text" id="offer_to_investor" placeholder="How much equity will you offer?">
+			            <h3>Additional Comments</h3>
+			                <textarea  class="big-text textInput" id="desc" placeholder="Add any additional comments about your idea here."></textarea>
+			                <div class="spacer" style="line-height:30px;height:30px;"></div>
+			                <button class="btn btn-primary btn-lg submit-button grow submitProjectBtn" type="submit">Submit Project</button>
+			        </form>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- END OF WRAPPER DIV -->
+	</div> 
+<!-- Start of Footer -->
+<footer class="footer">
+	<!-- Horizontal Line -->
+	<div class="divider div-transparent"></div>
+	<div class="spacer" style="line-height:10px;height:10px;"></div>
+	<div class="container">
+		<div class="row topFooterMenuRow">
+			<div class="col-lg-3 col-xs-12 navLogo">
+				<img class="grow footerLogo" alt="TeamUp logo dark" src="../public/assets/images/teamup-dark-blue-logo.png">
+			</div>
+
+			<div class="col-lg-9 col-xs-12 footer__menu">
+				<div class="footerLinks">
+					<ul class="footer_nav">
+						<li><a href="entrepreneur.html">For Entrepreneurs</a> |</li>
+						<li><a href="developer.html">For Developers</a> |</li>
+						<li><a href="investor.html">For Investors</a> |</li>
+						<li><a href="about.html">About</a> |</li>
+						<li><a href="contact.html">Contact Us</a> |</li>
+					</ul>
+				</div>				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12">
+				<hr>
+			</div>
+		</div>
+
+		<div class="row bottomFooterRow">
+			<div class="col-lg-3">
+				<ul class="footerSocial">
+					<a href="https://facebook.com/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+					<a href="https://linkedin.com/in/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+					<a href="https://twitter.com/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+				</ul>
+			</div>
+			
+			<div class="col-lg-9 footer__disclaimer">
+				<p>
+					TeamUp is a global technology company on a mission to bring app ideas to life by connecting entrepreneurs, developers, and investors. 
+				</p>
+				<p>
+					© Copyright 2017 TeamUp, Inc. All rights reserved. | 
+					<a href="/privacy/">Privacy Statement</a>
+				</p>
+				<br> <br>
+			</div>
+		</div>
+	</div>
+	
+
+</footer>
+		
+</body>
+</html>
+
+
+

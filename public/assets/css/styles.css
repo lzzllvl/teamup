@@ -3,6 +3,14 @@ html {
 
 }
 
+a {
+	color: #217dbb;
+}
+a:hover {
+	color: #6dd7fb;
+}
+
+
 .wrapper {
 	background-color: #fff
 
@@ -202,8 +210,8 @@ background-color: #ececec
 
 .footer__menu {
 	margin-top: 15px;
-	width: 75%;
-	text-align: right;
+/*	width: 75%;
+	text-align: right;*/
 }
 
 
@@ -278,8 +286,9 @@ background-color: #ececec
 	color: #6dd7fb;
 }
 
-
-
+.bottomFooterRow {
+	margin: 15px;
+}
 
 
 footer a {
@@ -324,10 +333,7 @@ ul.pullUp a:hover:before
 	display: flex;
 	justify-content: center;
 }
-container {
-	padding: 0;
-	background-color: #1eb2e4;
-}
+
 
 
 
@@ -337,14 +343,19 @@ container {
 
 @media(max-width: 1200px) {
 	.footerLogo {
-		width: 35%;
+		width: 85%;
 	}
 
 	.footer__menu {
-		width: 100%;
-		text-align: left;
+		
 	}
 }
+@media (max-width: 1199px) {
+	.footerLogo {
+		width: 35%
+	}
+}
+
 
 
 @media(max-width: 768px){
@@ -353,11 +364,20 @@ container {
 		display: inline-block;
 	}
 
+	.topFooterMenuRow {
+		padding-left: 50px;
+	}
 
+	.bottomFooterRow {
+		text-align: center;
+	}
 
+	.navLogo {
+	}
 
 	.footer__menu li{
-		display:block;
+		text-align: center;
+		display:inline-block;
 		margin-left:0px;
 	}
 
