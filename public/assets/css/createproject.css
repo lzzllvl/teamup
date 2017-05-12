@@ -1,0 +1,31 @@
+.createProjectContainer {
+	width: 80%;
+	text-align: left;
+}
+.createProjectDiv form {
+	text-align: left;
+}
+.createProjectForm {
+
+}
+
+.textInput  {
+	width: 55%;
+}
+
+.submitProjectBtn {
+	padding: 15px;
+	color: white;
+	background-color: #152b45;
+	border-radius: 5px;
+		border: 1.5px solid #152b45;
+
+}
+
+.submitProjectBtn:hover {
+	padding: 15px;
+	color: #152b45;
+	background-color: #fff;
+		border-radius: 5px;
+	border: 1.5px solid #152b45;
+}

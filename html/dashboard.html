@@ -4,8 +4,14 @@
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Icons -->
+  <link href="../public/assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -16,13 +22,35 @@
 
 </head>
 <body>
+    <div class="wrapper">
+<!-- Container for the site is spanning the full width of the window -->
+    <div class="container-fluid topContainer">
+      <header class="row">
+        <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
+          <div class="container-fluid navbarContainer">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right pullUp">
+
+              <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
+              <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
+              <li><a class="menuOptions" href="connections.html">My Connections</a></li>
+              <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+
+            </ul>
+          </div>
+        </nav>
+      </header>
+  </div>
+
 
 <div class="container">
   <div class="row">
 
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#projectsDash">Dashboard</a></li>
-    <li><a data-toggle="tab" href="#proTab">Projects</a></li>
+
+    <li class="active"><a data-toggle="tab" href="#proTab">Projects</a></li>
     <li><a data-toggle="tab" href="#devTab">Developers</a></li>
     <li><a data-toggle="tab" href="#invTab">Investors</a></li>
   </ul>
@@ -90,5 +118,61 @@
 
 </div>
 
+<!-- end of wrapper -->
+</div>
+<!-- Start of Footer -->
+<footer class="footer">
+  <!-- Horizontal Line -->
+  <div class="divider div-transparent"></div>
+  <div class="spacer" style="line-height:10px;height:10px;"></div>
+  <div class="container">
+    <div class="row topFooterMenuRow">
+      <div class="col-lg-3 col-xs-12 navLogo">
+        <img class="grow footerLogo" alt="TeamUp logo dark" src="../public/assets/images/teamup-dark-blue-logo.png">
+      </div>
+
+      <div class="col-lg-9 col-xs-12 footer__menu">
+        <div class="footerLinks">
+          <ul class="footer_nav">
+            <li><a href="entrepreneur.html">For Entrepreneurs</a> |</li>
+            <li><a href="developer.html">For Developers</a> |</li>
+            <li><a href="investor.html">For Investors</a> |</li>
+            <li><a href="about.html">About</a> |</li>
+            <li><a href="contact.html">Contact Us</a> |</li>
+          </ul>
+        </div>        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <hr>
+      </div>
+    </div>
+
+    <div class="row bottomFooterRow">
+      <div class="col-lg-3">
+        <ul class="footerSocial">
+          <a href="https://facebook.com/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+        </ul>
+      </div>
+      
+      <div class="col-lg-9 footer__disclaimer">
+        <p>
+          TeamUp is a global technology company on a mission to bring app ideas to life by connecting entrepreneurs, developers, and investors. 
+        </p>
+        <p>
+          © Copyright 2017 TeamUp, Inc. All rights reserved. | 
+          <a href="/privacy/">Privacy Statement</a>
+        </p>
+        <br> <br>
+      </div>
+    </div>
+  </div>
+  
+
+</footer>
 </body>
 </html>

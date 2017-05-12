@@ -1,9 +1,18 @@
 html {
     line-height: 1.45
+
 }
 
+a {
+	color: #217dbb;
+}
+a:hover {
+	color: #6dd7fb;
+}
+
+
 .wrapper {
-	background-color: #ececec
+	background-color: #fff
 
 }
 
@@ -64,9 +73,12 @@ p {
 
 
 .menuOptions {
-	color: #6dd7fb;
+	color: #000;
 }
 
+.navbar-default .navbar-nav>li>a:hover {
+	color: #6dd7fb;
+}
 
 .bodyHeaders {
 	font-family: "Nunito";
@@ -198,8 +210,8 @@ background-color: #ececec
 
 .footer__menu {
 	margin-top: 15px;
-	width: 75%;
-	text-align: right;
+/*	width: 75%;
+	text-align: right;*/
 }
 
 
@@ -217,7 +229,7 @@ background-color: #ececec
 }
 
 .footer__menu a, .footer__menu a:visited{
-	color: #152b45;
+/*	color: #152b45;*/
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: 'Nunito', Arial, Helvetica;
@@ -226,7 +238,8 @@ background-color: #ececec
 }
 
 .footer__menu a:hover{
-	text-decoration: underline;
+	text-decoration: none;
+	color: #6dd7fb;
 }
 
 
@@ -250,7 +263,43 @@ background-color: #ececec
 	color: #152b45;
 }
 
+.divider
+{
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
 
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.footerSocialIcon:hover {
+	color: #6dd7fb;
+}
+
+.bottomFooterRow {
+	margin: 15px;
+}
+
+
+footer a {
+	color: #152b45;
+
+}
+footer a:hover {
+	color: #6dd7fb;
+	text-decoration: none;
+
+}
 
 /*NAV BAR ANIMATIONS*/
 /* Pull up  */
@@ -284,10 +333,8 @@ ul.pullUp a:hover:before
 	display: flex;
 	justify-content: center;
 }
-container {
-	padding: 0;
-	background-color: #1eb2e4;
-}
+
+
 
 
 
@@ -296,14 +343,19 @@ container {
 
 @media(max-width: 1200px) {
 	.footerLogo {
-		width: 35%;
+		width: 85%;
 	}
 
 	.footer__menu {
-		width: 100%;
-		text-align: left;
+		
 	}
 }
+@media (max-width: 1199px) {
+	.footerLogo {
+		width: 35%
+	}
+}
+
 
 
 @media(max-width: 768px){
@@ -312,11 +364,20 @@ container {
 		display: inline-block;
 	}
 
+	.topFooterMenuRow {
+		padding-left: 50px;
+	}
 
+	.bottomFooterRow {
+		text-align: center;
+	}
 
+	.navLogo {
+	}
 
 	.footer__menu li{
-		display:block;
+		text-align: center;
+		display:inline-block;
 		margin-left:0px;
 	}
 

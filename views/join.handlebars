@@ -12,9 +12,9 @@
                                             </a>
                                         </div>
                                     </div>
-                        
-                        
-                                <input type='hidden' name='csrfmiddlewaretoken' value='CtiocfJSWsweiv8yodcoiuUffuivG3F1' />                        
+
+
+                                <input type='hidden' name='csrfmiddlewaretoken' value='CtiocfJSWsweiv8yodcoiuUffuivG3F1' />
                                 <h5>Sign up via email</h5>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12">
@@ -67,6 +67,20 @@
                                 </div>
                                 <p>Already have an Account?<a href="#"> Login</a></p>
                             </form>
+                            <script>
+                              $('#user-sign-up').on('submit', function(event) {
+                                event.preventDefault();
+                                var name = $('#id_first_name').val().trim() + " "
+                                         + $('#id_last_name').val().trim();
+
+                                $.post("/join", {
+                                  name: name,
+                                  email: $('#id_email').val().trim(),
+                                  password: $('#id_password').val().trim(),
+                                }, window.location.replace("/")
+                                );
+                              })
+                            </script>
                         </div>
                     </div>
                 </div>

@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-
-</head>
-<body>
-
-<div  id="instructions" style="padding-bottom: 10px;">
+div  id="instructions" style="padding-bottom: 10px;">
     <h2>Instructions:</h2>
     <h3>1. Choose the tab for the type of profile you want.</h3>
     <h3>Note: Only Entrepreneurs may create projects.</h3>
-    <h3>2. Complete the form and submit.</h3>
+    <h3>2. Fill out the form associated with the type of profile you want.</h3>
 </div>
 
 
@@ -37,7 +19,7 @@
     <div id="dev" class="tab-pane fade in active">
 
       <div class="box">
-        <form class="signup-box" id="devJoinForm">
+        <form class="signup-box" id="devJoinForm" action="join/developer" method="POST">
             <h2>Just a few more questions...</h2>
                 <hl>
             <h3>Profile Picture</h3>
@@ -63,7 +45,7 @@
       
       <div class="box">
 
-        <form class="signup-box" action="/entJoin/" 
+        <form class="signup-box" action="join/entrepreneur" 
             method="POST" id="entJoinForm">
 
             <h2>Just a few more questions...</h2>
@@ -86,7 +68,7 @@
 
     <div id="inv" class="tab-pane fade">
       <div class="box">
-        <form class="signup-box" action="/{{this.investor}?_method=GET"
+        <form class="signup-box" action="join/investor"
             method="POST" id="invJoinForm">
             <h2>Just a few more questions...</h2>
                 <hl>
@@ -99,7 +81,7 @@
             <h3>Bio - Description</h3>
                 <textarea type="text" class="big-text" id="desc"placeholder="About Me"></textarea>
             <h3>Past Investments</h3>
-                <input type="text" id="resume" placeholder="Past Investments">
+                <textarea type="text" id="resume" placeholder="Past Investments"></textarea>
             <h3>Investment range</h3>
                 <input type="text" id="investment-min" placeholder="Minimum Investment">
                 <span>-</span>
@@ -115,6 +97,3 @@
   
 </div>
 
-
-</body>
-</html>
