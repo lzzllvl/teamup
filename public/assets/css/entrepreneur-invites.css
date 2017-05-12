@@ -1,0 +1,107 @@
+div, a, ul, li, nav, header, footer {
+/*	border: 1px solid #ececec;
+*/}
+
+
+.requestContainer {
+	background-color: rgba(204,204,204,0.1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+
+.requestContainer:hover {
+	background-color: rgba(204,204,204,0);
+}
+
+.oneRequest {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.oneRequest:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.projectName {
+	display: block;
+	font-size: 26px;
+	font-family: 'bitter';
+	text-decoration: none;
+}
+
+.projectName:hover {
+	text-decoration: none!important;
+	color: #6dd7fb;
+}
+
+.requestFrom {
+		text-decoration: none;
+}
+
+.requestFrom:hover {
+		text-decoration: none;
+			color: #6dd7fb;
+}
+
+.requestor {
+	color: #152b45;
+
+}
+
+.requestor:hover {
+	color: #6dd7fb;
+	
+}
+
+.smallText {
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.inviteLabels {
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.respondBtn {
+		display: block;
+
+	background-color: #152b45;
+	color: white;
+	margin-right: 10px;
+
+
+}
+
+
+
+.buttonRow {
+	margin-left: 15px;
+}
+
+.removeBtn {
+	text-transform: uppercase;
+	background-color: #152b45;
+	color: white;
+}
+.removeBtn:hover {
+
+	color: #152b45;
+	background-color: #fff;
+	border: 2px solid #152b45;
+
+}
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 991px) {	
+	.buttonRow {
+		margin-right: 30px;
+		margin-left: 30px;
+
+	}
+	.respondBtn {
+		margin-bottom: 10px;
+	}
+}
