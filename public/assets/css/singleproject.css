@@ -1,0 +1,29 @@
+.projectNameDiv {
+
+}
+
+.projectName {
+	font-size: 40px;
+	font-family: 'bitter';
+}
+.projectOwner {
+	font-size: 20px;
+	font-family: 'nunito';
+
+}
+.requestBtn {
+	padding: 15px;
+	color: white;
+	background-color: #152b45;
+	border-radius: 5px;
+		border: 1.5px solid #152b45;
+
+}
+
+.requestBtn:hover {
+	padding: 15px;
+	color: #152b45;
+	background-color: #fff;
+		border-radius: 5px;
+	border: 1.5px solid #152b45;
+}

@@ -1,0 +1,40 @@
+.inviteBtn {
+	padding: 15px;
+	color: white;
+	background-color: #152b45;
+	border-radius: 5px;
+		border: 1.5px solid #152b45;
+
+}
+
+.inviteBtn:hover {
+	padding: 15px;
+	color: #152b45;
+	background-color: #fff;
+		border-radius: 5px;
+	border: 1.5px solid #152b45;
+}
+
+.linkedin {
+	font-size: 26px;
+	color: #152b45;
+
+}
+
+.linkedin:hover {
+	font-size: 26px;
+	color: #6dd7fb;
+	text-decoration: none;
+}
+
+.investmentRangeDiv {
+
+}
+
+.investmentRangeLabel {
+
+}
+
+.investmentRange {
+	
+}
