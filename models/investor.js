@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     investment_maximum: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      
     }
   }, {
     timestamps: false,

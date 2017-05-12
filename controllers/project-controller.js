@@ -1,4 +1,4 @@
-module.exports = function(router, db) {
+module.exports = function(router, db, passport) {
 
   router.get('/project/browse', function(req, res) {
     db.Project.findAll().done(function(rows){

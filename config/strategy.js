@@ -7,8 +7,11 @@ module.exports = function(passport, LocalStrategy, User) {
 
 
     passport.deserializeUser(function(id, done) {
-      User.findById(id, function(err, user) {
-        done(err, user);
+      User.find({
+        where: {
+          id: id
+        }}).then(function(err, user) {
+          done(err, user);
       });
     }); // if you are using sessions
 

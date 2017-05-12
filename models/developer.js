@@ -2,11 +2,11 @@ module.exports = (sequelize, DataTypes) => {
   var Developer = sequelize.define('Developer', {
     skills: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: true
     },
     experience: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: true
     }
   }, {
     timestamps: false,
