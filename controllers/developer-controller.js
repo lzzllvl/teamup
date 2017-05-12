@@ -17,6 +17,7 @@ module.exports = function(router, db){
 
   router.get('/developer/browse', function(req, res) {
     db.Developer.findAll();
+    res.render()
   });
 
   router.get("/developer/browse/:id", function(req, res) {

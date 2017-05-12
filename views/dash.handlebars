@@ -18,19 +18,12 @@
           <div class="container-fluid topContainer">
               {{#each project}}}
                 <a href="/project/{{id}}"> <ul>
-                  <li>{{project_name}}</li>
-                  <li>{{project_description}}</li>
-                  <li>{{needs_developer}}</li>
-                  <li>{{needs_investor}}</li>
-                  <li>{{offer_developer}}</li>
-                  <li>{{offer_to_developer}}</li>
-                  <li>{{offer_investor}}</li>
-                  <li>{{offer_to_developer}}</li>
-                  <li>{{offer_to_investor}}</li>
-                  <li>{{project_scope}}</li>
-                  <li>{{project_industry}}</li>
+                  <li><a href="/project/{{this.id}}">{{this.project_name}}</a></li>
+                  <li>{{this.project_description}}</li>
+                  <li>{{this.needs_developer}}</li>
+                  <li>{{this.needs_investor}}</li>
+                  <li>Industry: {{this.project_industry}}</li>
                 </ul>
-                </a>
               {{/each}}
           </div>
         </div>
@@ -39,8 +32,8 @@
       <h3 class="row">Developer</h3>
         <div class="container">
           <div>
-              {{#each developer}}}
-              <a href="/developer/{{id}}">   
+              {{#each developer}}
+              <a href="/developer/{{id}}">
                 <ul>
                     <li>{{developer_name}}</li>
                     <li>{{skills}}</li>
@@ -55,8 +48,8 @@
       <h3 class="row">Investor</h3>
         <div class="container">
           <div>
-            <a href="/investor/{{id}}"> 
-              {{#each developer}}}
+            <a href="/investor/{{id}}">
+              {{#each developer}}
                 <ul>
                     <li>{{investor_name}}</li>
                     <li>{{investor_minimum}}</li>
@@ -66,6 +59,7 @@
               </a>
           </div>
         </div>
+
     </div>
   </div>
 
