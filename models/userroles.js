@@ -1,14 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
-  var UserRoles = sequelize.define("userroles", {
+  var UserRole = sequelize.define("UserRole", {
 
   }, {
     timestamps: false,
     classMethods: {
       associate: function(models) {
-        UserRoles.belongsTo(models.User);
-        UserRoles.belongsTo(models.Role);
+        UserRole.belongsTo(models.User, {
+          unique: true
+        });
+        UserRole.belongsTo(models.Role);
       }
     }
   });
-  return UserRoles;
+  return UserRole;
 }

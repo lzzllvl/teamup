@@ -16,8 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
-
 // Static directory
+
 app.use(express.static(process.cwd() + "/public"));
 
 //methodOverride to support ReST methods
@@ -42,6 +42,7 @@ require('./config/strategy.js')(passport, LocalStrategy, db.User);
 
 
 
+
 const router = express.Router();
 require('./controllers/project-controller.js')(router, db);
 require('./controllers/investor-controller.js')(router, db);
@@ -50,7 +51,6 @@ require('./controllers/entrepeneur-controller.js')(router, db);
 require('./controllers/user-controller.js')(router, db);
 
 app.use('/', router);
-
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
