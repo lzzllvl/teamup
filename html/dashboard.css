@@ -1,0 +1,29 @@
+ .containers3 {
+ 		height: 650px;
+ 		font-size: 20px
+ 		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;	
+}
+
+h1 {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+
+
+#project {
+
+		background-color: #ececec
+}
+
+#developer {
+
+		background-color: #F0FFFF
+}
+
+#investor {
+
+		background-color: 	#FFFAF0
+}

@@ -24,7 +24,7 @@ module.exports = function(router, db) {
   router.post("/investor/:id", function(req, res) {
     let projID = req.params.id;
     let invID = req.body.id;
-    db.InvestorRequest.create();
+    db.InvestorInvite.create();
   });
 }
 

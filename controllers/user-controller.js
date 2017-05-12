@@ -21,6 +21,10 @@ module.exports = function(router, db) {
   });
 
   router.put('/acceptinvite/:id', function(req, res) {
+    //need to find the investor type first
+    db.developerInvite.update();
+    db.ProjectDeveloper.update();
+    //OR 
     db.InvestorInvite.update();
     db.ProjectInvestor.update();
   });

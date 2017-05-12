@@ -43,13 +43,13 @@ require('./config/strategy.js')(passport, LocalStrategy, db.User);
 // //Passport routes
 // var usersRoutes = require('./server/routes/usersRoutes')(app, express, passport);
 // app.use('/users', usersRoutes);
-const router = app.Router();
+// const router = app.Router();
+//
+//
+// app.use('/', router);
 
 
-app.use('/', router);
-
-
-db.sequelize.sync().then(function() {
+db.sequelize.sync({force: true}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
