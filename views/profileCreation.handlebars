@@ -1,0 +1,99 @@
+div  id="instructions" style="padding-bottom: 10px;">
+    <h2>Instructions:</h2>
+    <h3>1. Choose the tab for the type of profile you want.</h3>
+    <h3>Note: Only Entrepreneurs may create projects.</h3>
+    <h3>2. Fill out the form associated with the type of profile you want.</h3>
+</div>
+
+
+<div class="container">
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#dev">Developer</a></li>
+    <li><a data-toggle="tab" href="#ent">Entrepreneur</a></li>
+    <li><a data-toggle="tab" href="#inv">Investor</a></li>
+  </ul>
+
+  <div class="tab-content row">
+
+    <div id="dev" class="tab-pane fade in active">
+
+      <div class="box">
+        <form class="signup-box" id="devJoinForm" action="join/developer" method="POST">
+            <h2>Just a few more questions...</h2>
+                <hl>
+            <h3>Profile Picture</h3>
+                <input type="text" id="profile-pic" placeholder="Image URL">
+            <h3>Linkedin</h3>
+                <input type="text" placeholder="Linkedin URL" name="social">
+            <h3>Contact Information</h3>
+                <input type="text" placeholder="Phone Number" name="email">
+            <h3>Bio - Description</h3>
+                <textarea  class="big-text" id="desc" placeholder="About Me"></textarea>
+            <h3>Skills</h3>
+                <textarea type="text" id="skills" placeholder="List of Skills"></textarea>
+            <h3>Portfolio Website</h3>
+                <input type="text" id="portfolio" placeholder="Portfolio Link">
+                <br>
+                <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+        </form>
+    </div>
+    
+    </div>
+
+    <div id="ent" class="tab-pane fade">
+      
+      <div class="box">
+
+        <form class="signup-box" action="join/entrepreneur" 
+            method="POST" id="entJoinForm">
+
+            <h2>Just a few more questions...</h2>
+                <hl>
+            <h3>Profile Picture</h3>
+                <input type="text" id="profile-pic" placeholder="Image URL">
+            <h3>Linkedin</h3>
+                <input type="text" placeholder="Linkedin URL" name="social">
+            <h3>Contact Information</h3>
+                <input type="text" placeholder="Phone Number" name="email">
+            <h3>Bio - Description</h3>
+                <textarea type="text" class="big-text" placeholder="About Me"></textarea>
+            <h3>Title</h3>
+                <input type="text" id="Title" placeholder="Ex: CEO">
+                <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+        </form>
+
+     </div>
+    </div>
+
+    <div id="inv" class="tab-pane fade">
+      <div class="box">
+        <form class="signup-box" action="join/investor"
+            method="POST" id="invJoinForm">
+            <h2>Just a few more questions...</h2>
+                <hl>
+            <h3>Profile Picture</h3>
+                <input type="text" id="profile-pic" placeholder="Image URL">
+            <h3>Linkedin</h3>
+                <input type="text" placeholder="Linkedin URL" name="social">
+            <h3>Contact Information</h3>
+                <input type="text" placeholder="Phone Number" name="email">
+            <h3>Bio - Description</h3>
+                <textarea type="text" class="big-text" id="desc"placeholder="About Me"></textarea>
+            <h3>Past Investments</h3>
+                <textarea type="text" id="resume" placeholder="Past Investments"></textarea>
+            <h3>Investment range</h3>
+                <input type="text" id="investment-min" placeholder="Minimum Investment">
+                <span>-</span>
+                <input type="text" id="investment-max" placeholder="Maximum Investment">
+                <br>
+                <button class="btn btn-primary btn-large btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+        </form>
+     </div>
+    </div>
+
+  </div>
+
+  
+</div>
+
