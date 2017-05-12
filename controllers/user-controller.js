@@ -31,7 +31,6 @@ module.exports = function(router, db) {
           include.push(db.InvestorRequest);
           break;
       }
-      console.log(table);
       table.findOne({
         where: {
           UserId: row.UserId
@@ -51,11 +50,26 @@ module.exports = function(router, db) {
   });
 
   router.get('/join', function(req, res) {
-    res.render('join', {});
+    res.render('join');
   });
 
-  router.post('/join/:type', function(req, res) {
+  router.post('/join', function(req, res) {
+    var clear = req.body.password;
+    db.User.setPassword(clear, function(err, user) {
+      user.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: user.password
+      }).then(function(err) {
+        // res.redirect('/');
+        //res.render('profileCreation', { name: result.name });
+      });
+      res.redirect('/');
+  })
 
+  router.post('/join/:type', function(req, res) {
+      res.redirect('/userdash/')
+    })
   });
 
   router.put('/acceptinvite/:id', function(req, res) {
