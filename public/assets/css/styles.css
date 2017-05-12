@@ -1,9 +1,10 @@
 html {
     line-height: 1.45
+
 }
 
 .wrapper {
-	background-color: #ececec
+	background-color: #fff
 
 }
 
@@ -64,9 +65,12 @@ p {
 
 
 .menuOptions {
-	color: #6dd7fb;
+	color: #000;
 }
 
+.navbar-default .navbar-nav>li>a:hover {
+	color: #6dd7fb;
+}
 
 .bodyHeaders {
 	font-family: "Nunito";
@@ -217,7 +221,7 @@ background-color: #ececec
 }
 
 .footer__menu a, .footer__menu a:visited{
-	color: #152b45;
+/*	color: #152b45;*/
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: 'Nunito', Arial, Helvetica;
@@ -226,7 +230,8 @@ background-color: #ececec
 }
 
 .footer__menu a:hover{
-	text-decoration: underline;
+	text-decoration: none;
+	color: #6dd7fb;
 }
 
 
@@ -250,7 +255,42 @@ background-color: #ececec
 	color: #152b45;
 }
 
+.divider
+{
+	position: relative;
+	margin-top: 90px;
+	height: 1px;
+}
 
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.footerSocialIcon:hover {
+	color: #6dd7fb;
+}
+
+
+
+
+
+footer a {
+	color: #152b45;
+
+}
+footer a:hover {
+	color: #6dd7fb;
+	text-decoration: none;
+
+}
 
 /*NAV BAR ANIMATIONS*/
 /* Pull up  */
@@ -288,6 +328,7 @@ container {
 	padding: 0;
 	background-color: #1eb2e4;
 }
+
 
 
 
