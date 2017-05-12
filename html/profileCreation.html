@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#dev">Developer</a></li>
+    <li><a data-toggle="tab" href="#ent">Entrepreneur</a></li>
+    <li><a data-toggle="tab" href="#inv">Investor</a></li>
+  </ul>
+
+  <div class="tab-content row">
+
+    <div id="dev" class="tab-pane fade in active">
+
+      <div class="box">
+        <form class="signup-box" id="devJoinForm">
+            <h2>Just a few more questions...</h2>
+                <hl>
+            <h3>Profile Picture</h3>
+                <input type="text" id="profile-pic" placeholder="Image URL">
+            <h3>Social Media Links</h3>
+                <input type="text" placeholder="Linkedin Link" name="social">
+            <h3>Contact Information</h3>
+                <input type="text" placeholder="E-mail" name="email">
+            <h3>Bio - Description</h3>
+                <textarea  class="big-text" id="desc" placeholder="Description..."></textarea>
+            <h3>Skills</h3>
+                <textarea type="text" id="skills" placeholder="List of Skills..."></textarea>
+            <h3>Resume</h3>
+                <input type="text" id="resume" placeholder="Resume Link">
+            <h3>Portfolio Website</h3>
+                <input type="text" id="portfolio" placeholder="Portfolio Link">
+                <br>
+                <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+        </form>
+    </div>
+    
+    </div>
+
+    <div id="ent" class="tab-pane fade">
+      
+      <div class="box">
+
+        <form class="signup-box" action="/entJoin/" 
+            method="POST" id="entJoinForm">
+
+            <h2>Just a few more questions...</h2>
+                <hl>
+            <h3>Profile Picture</h3>
+                <input type="text" id="profile-pic" placeholder="Image URL">
+            <h3>Social Media Links</h3>
+                <input type="text" placeholder="Linkedin Link" name="social">
+            <h3>Contact Information</h3>
+                <input type="text" placeholder="E-mail" name="email">
+            <h3>Bio - Description</h3>
+                <textarea type="text" class="big-text" placeholder="About Me..."></textarea>
+            <h3>Title</h3>
+                <input type="text" id="Title" placeholder="Ex: CEO">
+                <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+        </form>
+
+     </div>
+    </div>
+
+    <div id="inv" class="tab-pane fade">
+      <div class="box">
+        <form class="signup-box" action="/{{this.investor}?_method=GET"
+            method="POST" id="invJoinForm">
+            <h2>Just a few more questions...</h2>
+                <hl>
+            <h3>Profile Picture</h3>
+                <input type="text" id="profile-pic" placeholder="Image URL">
+            <h3>Social Media Links</h3>
+                <input type="text" placeholder="Linkedin Link" name="social">
+            <h3>Contact Information</h3>
+                <input type="text" placeholder="E-mail" name="email">
+            <h3>Bio - Description</h3>
+                <textarea type="text" class="big-text" id="desc"placeholder="Description..."></textarea>
+            <h3>Resume</h3>
+                <input type="text" id="resume" placeholder="Resume Link">
+            <h3>Investment range</h3>
+                <input type="text" id="investment-min" placeholder="Minimum Investment">
+                <span>-</span>
+                <input type="text" id="investment-max" placeholder="Maximum Investment">
+                <br>
+                <button class="btn btn-primary btn-large btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+        </form>
+     </div>
+    </div>
+
+  </div>
+
+  
+</div>
+
+
+</body>
+</html>
