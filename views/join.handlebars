@@ -1,17 +1,25 @@
+<div class="container-fluid text-center homepage infoPageBannerDiv">
+    <img class="bannerImg" alt="sign up for Teamup" src="/assets/images/signuppagebanner.jpg">
+</div>
+<div class="spacer" style="line-height:30px;height:30px;"></div>
+
+
             <div class="col-xs-12 col-md-5 center-block" style="float: none;">
                 <div class="signup-box">
                     <div class="row">
                         <div class="col-xs-12">
                             <form action="/join" role="form" id="user-sign-up" name="user-sign-up" class="validate form" method="post">
-                                    <h5>Sign up via social network</h5>
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <a href="#" data-next="" data-provider="linkedin" class="btn btn-secondary btn-lg btn-block social-login">
-                                                <i class="icon-linkedin"></i>
-                                                <span>Join via Linkedin</span>
-                                            </a>
-                                        </div>
+                                    
+                                     <div class="row">
+
+                                    <div class="col-xs-12">
+                                        <a href="#" data-next="" data-provider="linkedin" class="grow  linkedInLogin">
+                                            <i class="fa fa-linkedin-square fa-2x"></i>
+                                            <span>Signup via Linkedin</span>
+                                        </a><hr>
                                     </div>
+                                </div>
+
 
 
                                 <input type='hidden' name='csrfmiddlewaretoken' value='CtiocfJSWsweiv8yodcoiuUffuivG3F1' />
@@ -61,11 +69,11 @@
                                     <div class="col-xs-12">
                                         <input type="hidden" name="next" value=""/>
                                         <button class="btn btn-primary btn-large btn-block submit-button" type="submit">
-                                            Join Us!
+                                            Continue Signing Up
                                         </button>
                                     </div>
                                 </div>
-                                <p>Already have an Account?<a href="/login"> Login</a></p>
+                                <p style="padding-top:20px;">Already have an Account?<a href="/login"> Login</a></p>
                             </form>
                             <script>
                               // $('#user-sign-up').on('submit', function(event) {

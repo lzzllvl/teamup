@@ -2,6 +2,16 @@ html {
     line-height: 1.15
 }
 
+textarea {
+	width: 500px;
+}
+
+nav-tabs li {
+	font-family: "nunito";
+	font-size: 20px;
+}
+
+
 .wrapper {
 	background-color: #ececec
 
@@ -252,23 +262,13 @@ ul.pullUp a:hover:before
 
 /*profileCreation CSS*/
 .signup-box {
-  border: 1px solid black;
+  
   padding: 20px;
   margin-top: 20px;
   text-align: center;
   background-color: #ececec;
 }
 
-/*.box {
-	display: flex;
-	justify-content: center;
-}
-container {
-	padding: 0 10px;
-	background-color: #1eb2e4;
-	margin-bottom: 10px;
-}
-*/
 
 
 /*MEDIA QUERIES*/
