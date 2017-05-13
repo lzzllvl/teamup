@@ -1,27 +1,4 @@
 
-
-<div class="wrapper">
-<!-- Container for the site is spanning the full width of the window -->
-  <div class="container-fluid topContainer">
-    <header class="row">
-      <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
-        <div class="container-fluid navbarContainer">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
-          </div>
-          <ul class="nav navbar-nav navbar-right pullUp">
-
-            <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
-            <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
-            <li><a class="menuOptions" href="connections.html">My Connections</a></li>
-            <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
-
-          </ul>
-        </div>
-      </nav>
-    </header>
-  <!-- end of top container -->
-  </div>
 <!-- project list -->
 <div class="container">
   <div class="row">
@@ -29,7 +6,7 @@
       <h1>My Invites</h1>
         {{#each project}}}
         <div class="container oneInvite inviteContainer">
-          <a class="col projectName" href="/project/{{id}}">
+          <a class="col projectName" href="/project/{{this.id}}">
             <h3 class="projectName">{{this.project_name}}</h3>
           </a>
         
@@ -62,5 +39,3 @@
 </div>
 
 
-<!-- end of wrapper -->
-</div>
