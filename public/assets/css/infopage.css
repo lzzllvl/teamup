@@ -32,13 +32,22 @@ i:hover {
 	background-color: white;
 }
 
-.investorInfoThirdDiv {
-
+.testimonialQuote {
+	text-align: left;
+	font-size: 29px;
+	font-family: "Bitter";
 }
 
 .trioImg {
+	border-radius: 50%;
+	width: 75%;
+}
 
-	width: 35%;
+
+.testimonialImg {
+	display: inline-block;
+	padding-top: 25px;
+	padding-bottom: 50px;
 }
 
 .infoPageFourthBigDiv {
