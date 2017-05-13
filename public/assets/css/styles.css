@@ -123,27 +123,15 @@ p {
 	padding: 0;
 }
 .homepageBanner {
-	
 	padding: 0px;
 	margin-top: 0; 
-	height: 650px;
 	position:relative;
 	display: block;
 	width: 100%;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-  background: 
-    /* top, transparent red */ 
-    linear-gradient(
-      rgba(0, 126, 174, 0.75), 
-      rgba(1, 180, 247, 0.55), 
-      rgba(0, 0, 0, 0.45)
-    ),
-    /* bottom, image */
-    url("../images/stock-2.jpeg");
 }
-
 
 .navbarContainer {
 	padding-right: 25px;
