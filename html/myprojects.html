@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
   <link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
 
 
-  <!-- my projects page CSS -->
+  <!-- developer invites page CSS -->
   <link rel="stylesheet" type="text/css" href="../public/assets/css/myprojects.css">
 
   <!-- GOOGLE FONTS: Nunito and Bitter -->
@@ -34,21 +34,27 @@
   <title>Team Up</title>
 
 </head>
-<body>
-<div class="wrapper">
-<!-- Container for the site is spanning the full width of the window -->
-  <div class="container-fluid topContainer">
+    <body>
+  <div class="wrapper">
+
+<div class="container-fluid topContainer">
     <header class="row">
       <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
         <div class="container-fluid navbarContainer">
           <div class="navbar-header">
             <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
           </div>
-          <ul class="nav navbar-nav navbar-right pullUp">
+          <ul class="nav navbar-nav navbar-right pullUp" id="nav-global">
 
-            <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
+            <li><a class="menuOptions" href="allProjects.html">Find Projects</a></li>
             <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
-            <li><a class="menuOptions" href="connections.html">My Connections</a></li>
+            <li>
+              <a class="menuOptions" href="#">Messages</a>
+              <ul class="nav navbar-nav navbar-right pullUp">
+                <li><a class="menuOptions" href="my-invites.html">Invites</a></li>
+                <li><a class="menuOptions" href="my-requests.html">Requests</a></li>
+            </li>
+            </ul>
             <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
 
           </ul>
@@ -62,7 +68,7 @@
   <div class="row">
         <div class="spacer" style="line-height:10px;height:10px;"></div>
       <h1 style="display:inline-block;">My Projects</h1>
-       <button class="btn grow createNewProjectBtn">Create New Project</button>
+       <a href="createproject.html"><button class="btn grow createNewProjectBtn">Create New Project</button></a>
         {{#each project}}}
         <div class="container oneProject projectContainer">
           <a class="projectName" href="/project/{{id}}">

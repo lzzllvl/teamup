@@ -329,11 +329,11 @@ ul.pullUp a:hover:before
   text-align: center;
 }
 
-.box {
+/*.box {
 	display: flex;
 	justify-content: center;
 }
-
+*/
 
 
 
@@ -388,4 +388,58 @@ ul.pullUp a:hover:before
 	.footer_nav{
 		padding-left:0px;
 	}
+}
+
+
+/*drop down menu*/
+#nav-global { 
+  margin: 0; 
+  padding: 0; 
+  list-style: none; 
+  font-family: "Nunito", Arial, sans-serif; 
+}
+#nav-global li { 
+  position: relative; 
+  display: block; 
+  float: left; 
+  text-transform: uppercase; 
+}
+#nav-global li a { 
+  border-right: 1px solid #6dd7fb; 
+  color: #fff; 
+
+}
+
+#nav-global li ul { 
+  position: absolute; 
+  top: 100%; 
+  display: none; 
+  margin: 0; 
+  padding: 0; 
+  border: 1px solid #152b45; 
+  border-top: 0; 
+}
+#nav-global li ul li { 
+  display: block; 
+  float: none; 
+  width: 100%; 
+  padding: 0; 
+  text-transform: uppercase; 
+}
+#nav-global li ul li a,
+#nav-global li:hover ul li a { 
+  display: block; 
+  padding: 6px 12px 3px 12px; 
+  color: #fff; 
+  background: #152b45; 
+  border-top: 1px solid #fff; 
+  border-right: 0; 
+}
+/* drop down */
+#nav-global li:hover ul { 
+  display: block; 
+}
+#nav-global li:hover ul li a:hover { 
+  color: #152b45; 
+  background: #fff; 
 }
