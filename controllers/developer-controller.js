@@ -31,4 +31,17 @@ module.exports = function(router, db){
     let devID = req.params.id;
     db.DeveloperRequest.create();
   });
+
+//all developers
+  router.get("/developer/:id", function(req, res) {
+    db.Developer.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(record) {
+      res.end();
+    })
+  });
+
+
 }
