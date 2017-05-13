@@ -43,7 +43,7 @@ module.exports = function(router, db, passport){
       }]
     }).then(function(data) {
       //res.json(data);
-      res.render('alldevelopers', { developers: data });
+      res.render('alldevelopers', { developers: data, layout: 'dashboard' });
     })
   });
 
@@ -59,6 +59,7 @@ module.exports = function(router, db, passport){
       }]
     }).then(function(data) {
       res.render('sendInvite', {
+        layout: 'dashboard'
         projects: data.Projects,
         personId: devId,
         type: 'dev'
