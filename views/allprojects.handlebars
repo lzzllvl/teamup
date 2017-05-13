@@ -1,0 +1,26 @@
+
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#proTab">Projects</a></li>
+      <li><a data-toggle="tab" href="#devTab">Developers</a></li>
+      <li><a data-toggle="tab" href="#invTab">Investors</a></li>
+    </ul>
+  </div>
+
+  <div class="tab-pane fade in active" id="proTab"  class="container-fluid topContainer" class="allcontainers">
+      <h3>Projects</h3>
+        <div class="container">
+          <div class="container-fluid topContainer">
+              {{#each projects}}
+                <a href="/project/{{id}}"> <ul>
+                  <li><a href="/project/{{this.id}}">{{this.project_name}}</a></li>
+                  <li>{{this.project_description}}</li>
+                  <li>{{this.needs_developer}}</li>
+                  <li>{{this.needs_investor}}</li>
+                  <li>Industry: {{this.project_industry}}</li>
+                </ul>
+              {{/each}}
+          </div>
+        </div>
+  </div>
+

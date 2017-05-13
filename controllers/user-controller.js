@@ -5,6 +5,7 @@ module.exports = function(router, db, passport) {
   });
 
   router.get('/userdash/:id',  function(req, res) {
+
     db.UserRole.find({
       where: {
         UserId: req.params.id
@@ -53,7 +54,6 @@ module.exports = function(router, db, passport) {
   router.post('/login', passport.authenticate('local', {
     failureRedirect: '/login'
   }), function(req, res) {
-
     res.redirect('/userdash/'+ req.user.id);
   });
 
@@ -81,34 +81,31 @@ module.exports = function(router, db, passport) {
     });
 
 
-
-
   router.post('/join/:type', function(req, res) {
       var table = null;
       var userrole = '';
       switch(req.params.type) {
         case 'developer':
           table = db.Developer;
-          userrole = 'dev'
+          userrole = 2;
           break;
         case 'entrepeneur':
           table = db.Entrepeneur;
-          userrole = 'ent'
+          userrole = 1;
           break;
         case 'investor':
           table = db.Investor;
-          userrole = 'inv'
+          userrole = 3;
           break;
       }
       table.create(req.body).then(function(){
         db.UserRole.create({
-          role: userrole,
+          RoleId: userrole,
           UserId: req.body.UserId
         }).then(function(){
           res.redirect('/userdash/' + req.body.UserId)
         })
       });
-
     })
   });
 
@@ -120,4 +117,4 @@ module.exports = function(router, db, passport) {
     db.InvestorInvite.update();
     db.ProjectInvestor.update();
   });
-}
+  }

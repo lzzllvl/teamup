@@ -31,4 +31,17 @@ module.exports = function(router, db, passport){
     let devID = req.params.id;
     db.DeveloperRequest.create();
   });
+
+//all developers
+  router.get("/developer/:id", function(req, res) {
+    db.Developer.findAll({
+      where: {
+        id: req.params.skills
+      }
+    }).then(function(data) {
+      res.render('home', { devId: req.params.skills });
+    })
+  });
+
+
 }
