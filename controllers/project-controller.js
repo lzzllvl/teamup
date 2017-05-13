@@ -27,4 +27,21 @@ module.exports = function(router, db, passport) {
     //OR
     db.InvestorRequest.create();
   });
+
+  router.post("/project/request", function(req, res) {
+    db.Developer.find({
+      where: {
+        UserId: req.body.UserId
+      },
+      attributes: ['id']
+    }).then(function(data) {
+      db.DeveloperRequest.create({
+        ProjectId: req.body.ProjectId,
+        DeveloperId: data.id,
+        message: req.body.message
+      }).then(function() {
+        res.redirect('userdash/' + "");
+      });
+    })
+  });
 }
