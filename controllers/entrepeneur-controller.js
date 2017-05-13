@@ -1,3 +1,3 @@
-module.exports = function(router, db) {
-  
+module.exports = function(router, db, passport) {
+
 }

@@ -22,8 +22,8 @@
   <link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
 
 
-  <!-- my projects page CSS -->
-  <link rel="stylesheet" type="text/css" href="../public/assets/css/myprojects.css">
+  <!-- developer invites page CSS -->
+  <link rel="stylesheet" type="text/css" href="../public/assets/css/entrepreneur-requests.css">
 
   <!-- GOOGLE FONTS: Nunito and Bitter -->
   <link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
@@ -61,20 +61,41 @@
 <div class="container">
   <div class="row">
         <div class="spacer" style="line-height:10px;height:10px;"></div>
-      <h1 style="display:inline-block;">My Projects</h1>
-       <button class="btn grow createNewProjectBtn">Create New Project</button>
+      <h1>My Requests</h1>
         {{#each project}}}
-        <div class="container oneProject projectContainer">
-          <a class="projectName" href="/project/{{id}}">
+        <div class="container oneRequest requestContainer">
+          <a class="col projectName" href="/project/{{id}}">
             <h3 class="projectName">{{project_name}}</h3>
           </a>
-          <a href="/project/{{id}}">
-            <button class="btn grow viewProjectBtn">View Project</button>
+
+          <h3 class="col col-md-3 inviteLabels">Request From:</h3>
+          <a class="col requestFrom" href="NOT SURE">
+             <p class="col col-md-11 requestor smallText">Zackery Rilling</p>
           </a>
-          <p class="smallText">{{project_description}}</p>
+        
+          <h3 class="col col-md-3 inviteLabels">Message</h3>
+            <p class="col col-md-11 smallText">Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!</p>
+
+            <div class="spacer" style="line-height:30px;height:30px;"></div>
+          <h3 class="col col-md-3 inviteLabels">Date Received:</h3>
+          <p class="col col-md-11 smallText">May 22, 2017</p>
+          <div class="spacer" style="line-height:30px;height:30px;"></div>
+          <h3 class="col col-md-3 inviteLabels">Accepted?</h3>
+          <p class="col col-md-11 smallText">No</p>
+                      <div class="spacer" style="line-height:30px;height:30px;"></div>
+
+        <div class="row buttonRow">
+          <a href="NOT SURE">
+            <button class="btn col-md-2 col-xs-12 grow respondBtn acceptBtn">Accept</button>
+          </a>
+
+          <a href="NOT SURE">
+            <button class="btn col-md-2 col-xs-12 grow respondBtn declineBtn">Decline</button>
+          </a>
+        </div>
+
           <div class="spacer" style="line-height:30px;height:30px;"></div>
         </div>
-        <div class="spacer" style="line-height:10px;height:10px;"></div>
         {{/each}}
 
   </div>
@@ -140,6 +161,3 @@
     
 </body>
 </html>
-
-
-

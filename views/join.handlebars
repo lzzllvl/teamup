@@ -2,7 +2,7 @@
                 <div class="signup-box">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form action="/join" role="form" id="user-sign-up" name="user-sign-up" class="validate form " action="POST">
+                            <form action="/join" role="form" id="user-sign-up" name="user-sign-up" class="validate form" method="post">
                                     <h5>Sign up via social network</h5>
                                     <div class="row">
                                         <div class="col-xs-12">
@@ -68,18 +68,17 @@
                                 <p>Already have an Account?<a href="/login"> Login</a></p>
                             </form>
                             <script>
-                              $('#user-sign-up').on('submit', function(event) {
-                                event.preventDefault();
-                                var name = $('#id_first_name').val().trim() + " "
-                                         + $('#id_last_name').val().trim();
-
-                                $.post("/join", {
-                                  name: name,
-                                  email: $('#id_email').val().trim(),
-                                  password: $('#id_password').val().trim(),
-                                }, window.location.replace("/")
-                                );
-                              })
+                              // $('#user-sign-up').on('submit', function(event) {
+                              //   event.preventDefault();
+                              //   var name = $('#id_first_name').val().trim() + " "
+                              //            + $('#id_last_name').val().trim();
+                              //
+                              //   $.post("/join", {
+                              //     name: name,
+                              //     email: $('#id_email').val().trim(),
+                              //     password: $('#id_password').val().trim(),
+                              //   }, window.location.replace('/createprofile'));
+                              // })
                             </script>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 
-module.exports = function(router, db){
+module.exports = function(router, db, passport){
   //developer dashboard
   router.get('/developer/:id', function(req, res) {
     let invID = req.params.id;
@@ -34,12 +34,12 @@ module.exports = function(router, db){
 
 //all developers
   router.get("/developer/:id", function(req, res) {
-    db.Developer.findOne({
+    db.Developer.findAll({
       where: {
-        id: req.params.id
+        id: req.params.skills
       }
-    }).then(function(record) {
-      res.end();
+    }).then(function(data) {
+      res.render('home', { devId: req.params.skills });
     })
   });
 
