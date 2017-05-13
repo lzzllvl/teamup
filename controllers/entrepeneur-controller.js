@@ -41,7 +41,7 @@ module.exports = function(router, db, passport) {
       personId: req.body.personId,
       ProjectId: req.body.ProjectId,
       message: req.body.message
-    }).then(function(){
+    }).then(function() {
       res.redirect('/userdash/' + currentUserId);
     });
   });
