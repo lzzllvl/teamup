@@ -27,7 +27,7 @@ module.exports = function(router, db, passport) {
         });
       }
       res.render('invProfile', {
-        layout: 'dashboard'
+        layout: 'dashboard',
         investor: data,
         projects: projects
       })
