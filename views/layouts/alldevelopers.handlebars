@@ -1,0 +1,18 @@
+    <div class="tab-pane fade" class="row" id="devTab"  class="allcontainers">
+      <h3 class="row">Developer</h3>
+        <div class="container">
+          <div>
+              {{#each developer}}
+              <a href="/developer/{{id}}">
+                <ul>
+                    <li>{{developer_name}}</li>
+                    <li>{{skills}}</li>
+                    <li>{{experience}}</li>
+              </a>
+                </ul>
+              {{/each}}
+              
+          </div>
+        </div>
+    </div>
+
