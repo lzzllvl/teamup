@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "bobross",
     "database": "teamup_db",
     "host": "localhost",
     "dialect": "mysql"

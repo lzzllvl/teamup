@@ -36,10 +36,10 @@ module.exports = function(router, db, passport){
   router.get("/developer/:id", function(req, res) {
     db.Developer.findAll({
       where: {
-        id: req.params.skills
+        id: req.data.id
       }
     }).then(function(data) {
-      res.render('home', { devId: req.params.skills });
+      res.render('developer', { developer: data });
     })
   });
 
