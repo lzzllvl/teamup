@@ -37,18 +37,24 @@
     <body>
   <div class="wrapper">
 
-  <div class="container-fluid topContainer">
+<div class="container-fluid topContainer">
     <header class="row">
       <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
         <div class="container-fluid navbarContainer">
           <div class="navbar-header">
             <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
           </div>
-          <ul class="nav navbar-nav navbar-right pullUp">
+          <ul class="nav navbar-nav navbar-right pullUp" id="nav-global">
 
-            <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
+            <li><a class="menuOptions" href="allProjects.html">Find Projects</a></li>
             <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
-            <li><a class="menuOptions" href="connections.html">My Connections</a></li>
+            <li>
+              <a class="menuOptions" href="#">Messages</a>
+              <ul class="nav navbar-nav navbar-right pullUp">
+                <li><a class="menuOptions" href="my-invites.html">Invites</a></li>
+                <li><a class="menuOptions" href="my-requests.html">Requests</a></li>
+            </li>
+            </ul>
             <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
 
           </ul>
