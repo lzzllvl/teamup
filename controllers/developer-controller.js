@@ -11,7 +11,7 @@ module.exports = function(router, db, passport){
         attributes: ['name', 'id', 'bio']
       },
       {
-        model: db.ProjectDeveloper
+        model: db.ProjectDeveloper,
         attributes: ['ProjectId']
       }]
     }).then(function(data) {
