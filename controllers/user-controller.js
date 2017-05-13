@@ -185,6 +185,7 @@ module.exports = function(router, db, passport) {
             });
             resultant.push(arr[0]);
           });
+          
           for(var i = 0; i < resultant.length; i++){
             console.log(resultant[i].id, rows[i].ProjectId);
             if(resultant[i].id == rows[i].ProjectId){
