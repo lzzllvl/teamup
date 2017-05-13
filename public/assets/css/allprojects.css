@@ -2,20 +2,19 @@ div, a, ul, li, nav, header, footer {
 	/*border: 1px solid green;*/
 }
 
-.createNewProjectBtn {
-	float: right;
-	color: #152b45;
-	background-color: #fff;
-	border: 2px solid #152b45;
-	
-}
-
 .createNewProjectBtn:hover {
+	float: right;
 	background-color: #152b45;
 	color: white;
 
 }
 
+.createNewProjectBtn {
+	float: right;
+	color: #152b45;
+	background-color: #fff;
+	border: 2px solid #152b45;
+}
 
 .projectContainer {
 	background-color: rgba(204,204,204,0.1);
@@ -55,5 +54,11 @@ div, a, ul, li, nav, header, footer {
 	float: right;
 	background-color: #152b45;
 	color: white;
+	margin-bottom: 10px;
+	margin-right: 10px; 
 
+}
+
+.projectDetailsList  li {
+	padding-bottom: 16px;
 }

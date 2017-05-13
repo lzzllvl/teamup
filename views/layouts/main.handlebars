@@ -34,78 +34,85 @@
     <div class="wrapper">
 <!-- Container for the site is spanning the full width of the window -->
 		<div class="container-fluid topContainer homepageBanner">
-			<header class="row">
-				<nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
-				  <div class="container-fluid navbarContainer">
-				    <div class="navbar-header">
-				      <a class="navbar-brand" id='navLogo' href="/"><img class="grow navLogoImg" alt="TeamUp logo" src="/assets/images/teamup-small-white-logo.png"> </a>
-				    </div>
-				    <ul class="nav navbar-nav navbar-right pullUp">
+					    <header class="row">
+      <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
+        <div class="container-fluid navbarContainer">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="assets/images/teamup-logo-white-blue.png"> </a>
+          </div>
+          <ul class="nav navbar-nav navbar-right pullUp" id="nav-global">
 
-				      <li><a class="menuOptions" href="/entrepreneur/browse">Entrepreneurs</a></li>
-				      <li><a class="menuOptions" href="/developer/browse">Developers</a></li>
-				      <li><a class="menuOptions" href="/investor/browse">Investors</a></li>
-				      <li><a class="menuOptions" href="/join"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				      <li><a class="menuOptions" href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a class="menuOptions" href="entrepreneur.html">Entrepreneurs</a></li>
+            <li><a class="menuOptions" href="developer.html">Developers</a></li>
+            <li><a class="menuOptions" href="investor.html">Investors</a></li>
+            <li><a class="menuOptions" href="join.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a class="menuOptions" href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
-				    </ul>
-				  </div>
-				</nav>
-			</header>
+          </ul>
+        </div>
+      </nav>
+    </header>
 		</div>
 
             {{{body}}}
 
-  <footer class="footer">
-		<div class="container">
-			<div class="row topFooterMenuRow">
-				<div class="col-lg-3 col-xs-12 navLogo">
-					<img class="grow footerLogo" alt="TeamUp logo dark" src="/assets/images/teamup-logo-dark-blue.png">
-				</div>
+  <!-- end of wrapper -->
+  </div>
 
-				<div class="col-lg-9 col-xs-12 footer__menu">
-					<div class="footerLinks">
-						<ul class="footer_nav">
-							<li><a href="/entrepreneur/browse">For Entrepreneurs</a> |</li>
-							<li><a href="/developer/browse">For Developers</a> |</li>
-							<li><a href="/investor/browse">For Investors</a> |</li>
-							<li><a href="/about">About</a> |</li>
-							<li><a href="/contact">Contact Us</a> |</li>
-						</ul>
-					</div>
-				</div>
-			</div>
 
-			<div class="row">
-				<div class="col-lg-12">
-					<hr>
-				</div>
-			</div>
+<!-- Start of Footer -->
+<footer class="footer">
+  <!-- Horizontal Line -->
+  {{!--<div class="divider div-transparent"></div>--}}
+  <div class="spacer" style="line-height:10px;height:10px;"></div>
+  <div class="container">
+    <div class="row topFooterMenuRow">
+      <div class="col-lg-3 col-xs-12 navLogo">
+        <img class="grow footerLogo" alt="TeamUp logo dark" src="assets/images/teamup-dark-blue-logo.png">
+      </div>
 
-			<div class="row bottomFooterRow">
-				<div class="col-lg-3">
-					<ul class="footerSocial">
-						<a href="https://facebook.com/teamup" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
-						<a href="https://linkedin.com/in/teamup" target="_blank"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
-						<a href="https://twitter.com/teamup" target="_blank"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
-					</ul>
-				</div>
+      <div class="col-lg-9 col-xs-12 footer__menu">
+        <div class="footerLinks">
+          <ul class="footer_nav">
+            <li><a href="entrepreneur.html">For Entrepreneurs</a> |</li>
+            <li><a href="developer.html">For Developers</a> |</li>
+            <li><a href="investor.html">For Investors</a> |</li>
+            <li><a href="about.html">About</a> |</li>
+            <li><a href="contact.html">Contact Us</a> |</li>
+          </ul>
+        </div>        
+      </div>
+    </div>
 
-				<div class="col-lg-9 footer__disclaimer">
-					<p>
-						TeamUp is a global technology company on a mission to bring app ideas to life by connecting entrepreneurs, developers, and investors.
-					</p>
-					<p>
-						© Copyright 2017 TeamUp, Inc. All rights reserved. |
-						<a href="/privacy/">Privacy Statement</a>
-					</p>
-					<br> <br>
-				</div>
-			</div>
-		</div>
+    <div class="row">
+      <div class="col-lg-12">
+        <hr>
+      </div>
+    </div>
 
+    <div class="row bottomFooterRow">
+      <div class="col-lg-3">
+        <ul class="footerSocial">
+          <a href="https://facebook.com/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/teamup" target="_blank"><i class="grow footerSocialIcon fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+        </ul>
+      </div>
+      
+      <div class="col-lg-9 footer__disclaimer">
+        <p>
+          TeamUp is a global technology company on a mission to bring app ideas to life by connecting entrepreneurs, developers, and investors. 
+        </p>
+        <p>
+          © Copyright 2017 TeamUp, Inc. All rights reserved. | 
+          <a href="/privacy/">Privacy Statement</a>
+        </p>
+        <br> <br>
+      </div>
+    </div>
+  </div>
+  
 
 </footer>
-		</div>
 </body>
 </html>
