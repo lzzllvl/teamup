@@ -26,7 +26,7 @@
              <a class="projectName" href="/project/{{this.id}}">
                <h3 class="projectName">You Have {{numDevInvites}} new Project Invitations!</h3>
              </a>
-             <a href="/project/{{this.id}}">
+             <a href="/devinvites/{{personId}}">
                <button class="btn grow viewProjectBtn">View Invites</button>
              <div class="spacer" style="line-height:30px;height:30px;"></div>
            </div>
@@ -50,7 +50,7 @@
               <a class="projectName" href="/project/{{this.id}}">
                 <h3 class="projectName">You Have {{numInvInvites}} new Project Invitations!</h3>
               </a>
-              <a href="/project/{{this.id}}">
+              <a href="/invinvites/{{personId}}">
                 <button class="btn grow viewProjectBtn">View Invites</button>
               <div class="spacer" style="line-height:30px;height:30px;"></div>
             </div>
@@ -67,6 +67,11 @@
             </div>
             <div class="spacer" style="line-height:10px;height:10px;"></div>
             {{/if}}
+
+            {{else}}
+    <div class="jumbotron" style="background-color:#fff; font-size: 20px; font-family:'nunito';">No Projects Yet!</div>
+
+
           {{/if}}
 
   </div>

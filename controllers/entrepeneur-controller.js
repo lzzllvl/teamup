@@ -4,7 +4,7 @@ module.exports = function(router, db, passport) {
 
   });
   router.get('/entrepreneur/create/:id', function(req, res) {
-    res.render('createproject', {UserId: req.params.id});
+    res.render('createproject', {UserId: req.params.id, layout: 'dashboard'});
   })
 
   router.post('/entrepreneur/create/:id', function(req, res) {
