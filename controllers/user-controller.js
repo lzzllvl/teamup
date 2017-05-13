@@ -10,8 +10,8 @@ module.exports = function(router, db, passport) {
       case 'developer':
         template = 'developer'
         break;
-      case 'entrepeneur':
-        template = 'entrepeneur';
+      case 'entrepreneur':
+        template = 'entrepreneur';
         break;
       case 'investor':
         template = 'investor';
