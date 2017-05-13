@@ -23,10 +23,10 @@
 
       <div class="box">
 
-        <form class="signup-box" id="devJoinForm" action="/projects" method="POST">
+        <form class="signup-box" id="devJoinForm" action="/join/developer" method="POST">
 
             <h2>Just a few more questions...</h2>
-                <input class="hidden" name="UserId" value={{data.id}} type="text"  placeholder="Image URL">
+                <input class="hidden" name="UserId" value={{data.id}}>
             <h3>Profile Picture</h3>
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>
@@ -51,12 +51,12 @@
       <div class="box">
 
 
-        <form class="signup-box" action="/investors" 
+        <form class="signup-box" action="/join/entrepeneur"
 
             method="POST" id="entJoinForm">
 
             <h2>Just a few more questions...</h2>
-                <hl>
+                <input class="hidden" name="UserId" value={{data.id}} >
             <h3>Profile Picture</h3>
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>
@@ -76,11 +76,11 @@
     <div id="inv" class="tab-pane fade">
       <div class="box">
 
-        <form class="signup-box" action="/projects"
+        <form class="signup-box" action="/join/investor"
             method="POST" id="invJoinForm">
 
             <h2>Just a few more questions...</h2>
-                <hl>
+                <input class="hidden" name="UserId" value={{data.id}}>
             <h3>Profile Picture</h3>
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>

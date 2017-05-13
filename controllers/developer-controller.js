@@ -48,19 +48,15 @@ module.exports = function(router, db, passport){
     })
   });
 
-  router.get("/developer/browse/:id", function(req, res) {
+  router.get("/devInvite", function(req, res) {
     let devID = req.params.id;
     db.Developer.findOne();
     //res.render etc
   });
 
-  //invite a developer
-  router.post("/developer/browse/:id", function(req, res) {
-    let devID = req.params.id;
-    db.DeveloperRequest.create();
-  });
-
-//all developers
-
-
+  // a developer
+  // router.post("/project/request", function(req, res) {
+  //   let devID = req.params.id;
+  //   db.DeveloperRequest.create();
+  // });
 }
