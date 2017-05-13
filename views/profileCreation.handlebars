@@ -1,4 +1,7 @@
 <div  id="instructions" style="padding-bottom: 10px;">
+
+    <h2>Hello, {{data.name}}</h2>
+
     <h2>Instructions:</h2>
     <h3>1. Choose the tab for the type of profile you want.</h3>
     <h3>Note: Only Entrepreneurs may create projects.</h3>
@@ -19,9 +22,11 @@
     <div id="dev" class="tab-pane fade in active">
 
       <div class="box">
+
         <form class="signup-box" id="devJoinForm" action="/projects" method="POST">
+
             <h2>Just a few more questions...</h2>
-                <hl>
+                <input class="hidden" name="UserId" value={{data.id}} type="text"  placeholder="Image URL">
             <h3>Profile Picture</h3>
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>
@@ -29,24 +34,26 @@
             <h3>Contact Information</h3>
                 <input type="text" placeholder="Phone Number" name="email">
             <h3>Bio - Description</h3>
-                <textarea  class="big-text" id="desc" placeholder="About Me"></textarea>
+                <input type="textarea"  class="big-text" name="bio" placeholder="About Me">
             <h3>Skills</h3>
-                <textarea type="text" id="skills" placeholder="List of Skills"></textarea>
+                <input type="textarea" type="text" name="skills" placeholder="List of Skills">
             <h3>Portfolio Website</h3>
                 <input type="text" id="portfolio" placeholder="Portfolio Link">
                 <br>
                 <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
         </form>
     </div>
-    
+
     </div>
 
     <div id="ent" class="tab-pane fade">
-      
+
       <div class="box">
 
-        <form class="signup-box" action="/Investor" 
+
+        <form class="signup-box" action="/investors" 
             method="POST" id="entJoinForm">
+
 
             <h2>Just a few more questions...</h2>
                 <hl>
@@ -68,8 +75,10 @@
 
     <div id="inv" class="tab-pane fade">
       <div class="box">
+
         <form class="signup-box" action="/projects"
             method="POST" id="invJoinForm">
+
             <h2>Just a few more questions...</h2>
                 <hl>
             <h3>Profile Picture</h3>
@@ -94,6 +103,6 @@
 
   </div>
 
-  
+
 </div>
 

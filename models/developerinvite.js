@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     message: {
       type: DataTypes.TEXT,
-      allowNull: false
+      
     }
   }, {timestamps: true})
   return DeveloperInvite;

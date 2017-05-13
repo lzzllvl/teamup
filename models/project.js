@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
       },
       full_description: {
         type: DataTypes.TEXT,
-        allowNull: false
+        
       },
       short_description: {
         type: DataTypes.TEXT('tiny'),
-        allowNull: false
+
       },
       needs_developer: {
          type: DataTypes.BOOLEAN,

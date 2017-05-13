@@ -1,10 +1,10 @@
-module.exports = function(router, db) {
+module.exports = function(router, db, passport) {
 
   router.get('/', function(req,res) {
     res.render('index', {});
   });
 
-  router.get('/userdash/:id', function(req, res) {
+  router.get('/userdash/:id',  function(req, res) {
     db.UserRole.find({
       where: {
         UserId: req.params.id
@@ -49,6 +49,14 @@ module.exports = function(router, db) {
     res.render('login', {});
   });
 
+
+  router.post('/login', passport.authenticate('local', {
+    failureRedirect: '/login'
+  }), function(req, res) {
+
+    res.redirect('/userdash/'+ req.user.id);
+  });
+
   router.get('/join', function(req, res) {
     res.render('join');
   });
@@ -56,19 +64,51 @@ module.exports = function(router, db) {
   router.post('/join', function(req, res) {
     var clear = req.body.password;
     db.User.setPassword(clear, function(err, user) {
-      user.create({
-        name: req.body.name,
+      var newUser = {
+        name: req.body.first_name + " " + req.body.last_name,
         email: req.body.email,
         password: user.password
-      }).then(function(err) {
-        // res.redirect('/');
-        //res.render('profileCreation', { name: result.name });
+      };
+      user.create(newUser).then(function() {
+        db.User.find({where: {email: newUser.email}}).then(function(row){
+          // req.login(row.dataValues, function(err) {
+          //   if (err) { console.log(err) }
+          //   return;
+          // });
+          res.render('profileCreation', {data: row.dataValues});
+        });
       });
-      res.redirect('/');
-  })
+    });
+
+
+
 
   router.post('/join/:type', function(req, res) {
-      res.redirect('/userdash/')
+      var table = null;
+      var userrole = '';
+      switch(req.params.type) {
+        case 'developer':
+          table = db.Developer;
+          userrole = 'dev'
+          break;
+        case 'entrepeneur':
+          table = db.Entrepeneur;
+          userrole = 'ent'
+          break;
+        case 'investor':
+          table = db.Investor;
+          userrole = 'inv'
+          break;
+      }
+      table.create(req.body).then(function(){
+        db.UserRole.create({
+          role: userrole,
+          UserId: req.body.UserId
+        }).then(function(){
+          res.redirect('/userdash/' + req.body.UserId)
+        })
+      });
+
     })
   });
 
