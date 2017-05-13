@@ -29,8 +29,7 @@ module.exports = function(router, db, passport){
       res.render('devProfile', {
         developer: data,
         projects: projects
-      })
-      // res.json(data);
+      })    
     })
   });
 
@@ -59,12 +58,23 @@ module.exports = function(router, db, passport){
       }]
     }).then(function(data) {
       res.render('sendInvite', {
-        layout: 'dashboard'
+        layout: 'dashboard',
         projects: data.Projects,
         personId: devId,
         type: 'dev'
       });
     })
   });
+  router.put('/developer/acceptInvite/:id', function(req, res) {
 
+    db.DeveloperInvite.update({
+      accepted: true
+    },{
+      where: {
+        id: req.params.id
+      }
+    }).then(function() {
+      res.redirect('/userdash/' + currentUserId);
+    })
+  });
 }

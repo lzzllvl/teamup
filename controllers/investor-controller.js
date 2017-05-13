@@ -27,7 +27,7 @@ module.exports = function(router, db, passport) {
         });
       }
       res.render('invProfile', {
-        layout: 'dashboard'
+        layout: 'dashboard',
         investor: data,
         projects: projects
       })
@@ -61,13 +61,26 @@ module.exports = function(router, db, passport) {
       }]
     }).then(function(data) {
       res.render('sendInvite', {
+        layout: 'dashboard',
         projects: data.Projects,
         personId: invId,
         type: 'inv'
       });
     })
   });
+
+
+  router.put('/investor/acceptInvite/:id', function(req, res) {
+
+    db.InvestorInvite.update({
+      accepted: true
+    },{
+      where: {
+        id: req.params.id
+      }
+    }).then(function() {
+      res.redirect('/userdash/' + currentUserId);
+    })
+  });
+
 }
-
-
-
