@@ -1,3 +1,4 @@
+
 html {
     line-height: 1.45
 
@@ -99,10 +100,13 @@ p {
 }
 
 #secondHeader {
-	padding-top: 100px; 
+	padding-top: 10px; 
 	padding-bottom: 60px;
 }
 
+.listofapps {
+	opacity: 0.4;
+}
 
 .homepageText {
 	color: white;
@@ -131,6 +135,10 @@ p {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 }
 
 .navbarContainer {
@@ -172,14 +180,14 @@ p {
 */}
 
 #secondBigDiv {
-	padding-top: 50px;
-	padding-bottom: 30px;
-background-color: #ececec
+	padding-top: 80px;
+	padding-bottom: 60px;
+
  }
 
 #thirdBigDiv {
 	padding-top: 20px;
-	padding-bottom: 100px;
+	padding-bottom: 60px;
  background-image: linear-gradient(#6dd7fb, #fff, #fff);
  box-shadow: inset 0 0 100px hsla(0,0%,0%,.0);
  }

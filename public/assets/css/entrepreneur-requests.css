@@ -103,6 +103,24 @@ div, a, ul, li, nav, header, footer {
 
 }
 
+
+.removeBtn {
+	text-transform: uppercase;
+	background-color: #152b45;
+	color: white;
+	margin-bottom: 20px;
+		margin-top: 20px;
+
+}
+.removeBtn:hover {
+
+	color: #152b45;
+	background-color: #fff;
+	border: 2px solid #152b45;
+
+}
+
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 991px) {	
