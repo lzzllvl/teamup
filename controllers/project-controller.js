@@ -1,6 +1,6 @@
 module.exports = function(router, db, passport) {
 
-  router.get('/project/browse', function(req, res) {
+  router.get('/projects', function(req, res) {
     db.Project.findAll({
       attributes: ['id', 'short_description', 'project_name', 'needs_investor', 'needs_developer', 'project_industry']
     }).done(function(rows) {
