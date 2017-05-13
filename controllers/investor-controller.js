@@ -26,5 +26,16 @@ module.exports = function(router, db) {
     let invID = req.body.id;
     db.InvestorInvite.create();
   });
+
+  //investor join
+
+  router.post('/investor/:id/join', function(req, res) {
+    db.Investor.findOne();
+    let proID = req.params.id;
+    let intID = req.body.id;
+    res.render('invJoinForm', {});
+  });
 }
+
+
 

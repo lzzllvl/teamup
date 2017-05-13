@@ -1,4 +1,4 @@
-div  id="instructions" style="padding-bottom: 10px;">
+<div  id="instructions" style="padding-bottom: 10px;">
     <h2>Instructions:</h2>
     <h3>1. Choose the tab for the type of profile you want.</h3>
     <h3>Note: Only Entrepreneurs may create projects.</h3>
@@ -19,7 +19,7 @@ div  id="instructions" style="padding-bottom: 10px;">
     <div id="dev" class="tab-pane fade in active">
 
       <div class="box">
-        <form class="signup-box" id="devJoinForm" action="join/developer" method="POST">
+        <form class="signup-box" id="devJoinForm" action="/projects" method="POST">
             <h2>Just a few more questions...</h2>
                 <hl>
             <h3>Profile Picture</h3>
@@ -45,7 +45,7 @@ div  id="instructions" style="padding-bottom: 10px;">
       
       <div class="box">
 
-        <form class="signup-box" action="join/entrepreneur" 
+        <form class="signup-box" action="/Investor" 
             method="POST" id="entJoinForm">
 
             <h2>Just a few more questions...</h2>
@@ -68,7 +68,7 @@ div  id="instructions" style="padding-bottom: 10px;">
 
     <div id="inv" class="tab-pane fade">
       <div class="box">
-        <form class="signup-box" action="join/investor"
+        <form class="signup-box" action="/projects"
             method="POST" id="invJoinForm">
             <h2>Just a few more questions...</h2>
                 <hl>
