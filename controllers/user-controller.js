@@ -7,12 +7,14 @@ module.exports = function(router, db, passport) {
   router.get('/info/:type', function(req,res) {
     var template = ''
     switch(req.params.type){
-      case 'developer':
-        template = 'developer'
-        break;
       case 'entrepreneur':
         template = 'entrepreneur';
         break;
+
+      case 'developer':
+        template = 'developer';
+        break;
+
       case 'investor':
         template = 'investor';
         break;

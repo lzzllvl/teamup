@@ -1,12 +1,20 @@
-<div  id="instructions" style="padding-bottom: 10px;">
-
-    <h2>Hello, {{data.name}}</h2>
-
-    <h2>Instructions:</h2>
-    <h3>1. Choose the tab for the type of profile you want.</h3>
-    <h3>Note: Only Entrepreneurs may create projects.</h3>
-    <h3>2. Fill out the form associated with the type of profile you want.</h3>
+<div class="container-fluid text-center homepage infoPageBannerDiv">
+    <img class="bannerImg" alt="create teamup profile" src="/assets/images/signuppagebanner.jpg">
 </div>
+<div class="spacer" style="line-height:30px;height:30px;"></div>
+<div class="container">
+<div class="row">
+    <h1 class="header">Complete Your Profile</h1>
+        <div class="col">
+          <div class="col col-md-4 text-center"><h4>Step 1) Select your profile type</h4><p class="smallText">Entrepreneurs can create projects and invite investors and developers to their projects. Developer and Investors can find projects that they are interested in, and submit connection requests to the entrepreneurs that created the projects.</p></div>
+          <div class="col col-md-4 text-center"><h4>Step 2) Complete the profile requirements</h4><p class="smallText">Each profile type has a set of questions that must be answered before you can proceed to using TeamUp. Fill out the form below, and you're all set to go!</p></div>
+          <div class="col col-md-4 text-center"><h4>Step 3) Start building your team</h4><p class="smallText">Once you're profile has been created, it's up to you to find projects that you love, developers that work hard, and investors with a vision that aligns with yours. It's time to TeamUp, and start building your dreams.</p></div>
+</div>
+
+  
+
+
+      </div>
 
 
 <div class="container">
@@ -30,17 +38,15 @@
             <h3>Profile Picture</h3>
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>
-                <input type="text" placeholder="Linkedin URL" name="social">
-            <h3>Contact Information</h3>
-                <input type="text" placeholder="Phone Number" name="email">
-            <h3>Bio - Description</h3>
+                <input type="text" placeholder="Linkedin URL" name="social">    
+            <h3>About Me</h3>
                 <input type="textarea"  class="big-text" name="bio" placeholder="About Me">
-            <h3>Skills</h3>
+            <h3>Skills/Technologies</h3>
                 <input type="textarea" type="text" name="skills" placeholder="List of Skills">
             <h3>Portfolio Website</h3>
                 <input type="text" id="portfolio" placeholder="Portfolio Link">
                 <br>
-                <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+                <button class="btn btn-primary btn-block submit-button" style="margin-top: 30px;" type="submit">Submit</button>
         </form>
     </div>
 
@@ -61,13 +67,11 @@
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>
                 <input type="text" placeholder="Linkedin URL" name="social">
-            <h3>Contact Information</h3>
-                <input type="text" placeholder="Phone Number" name="email">
-            <h3>Bio - Description</h3>
+            <h3>About Me</h3>
                 <textarea type="text" class="big-text" placeholder="About Me"></textarea>
-            <h3>Title</h3>
+            <h3>Occupation/Title</h3>
                 <input type="text" id="Title" placeholder="Ex: CEO">
-                <button class="btn btn-primary btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+                <button class="btn btn-primary btn-block submit-button" style="margin-top: 30px;" type="submit">Submit</button>
         </form>
 
      </div>
@@ -85,18 +89,16 @@
                 <input type="text" id="profile-pic" placeholder="Image URL">
             <h3>Linkedin</h3>
                 <input type="text" placeholder="Linkedin URL" name="social">
-            <h3>Contact Information</h3>
-                <input type="text" placeholder="Phone Number" name="email">
-            <h3>Bio - Description</h3>
+            <h3>About Me</h3>
                 <textarea type="text" class="big-text" id="desc"placeholder="About Me"></textarea>
-            <h3>Past Investments</h3>
+            <h3>Past Investments/Companies</h3>
                 <textarea type="text" id="resume" placeholder="Past Investments"></textarea>
-            <h3>Investment range</h3>
+            <h3>Investment Range</h3>
                 <input type="text" id="investment-min" placeholder="Minimum Investment">
                 <span>-</span>
                 <input type="text" id="investment-max" placeholder="Maximum Investment">
                 <br>
-                <button class="btn btn-primary btn-large btn-block submit-button" style="margin-top: 10px;" type="submit">Submit</button>
+                <button class="btn btn-primary btn-large btn-block submit-button" style="margin-top: 30px;" type="submit">Submit</button>
         </form>
      </div>
     </div>
