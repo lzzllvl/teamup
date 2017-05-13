@@ -73,18 +73,18 @@ module.exports = function(router, db, passport) {
           isDev: isDev,
           isEnt: isEnt
         }
-        if(data.DeveloperInvites) {
+        if(data.DeveloperInvites && data.DeveloperInvites.length) {
           renderData.personId = data.DeveloperInvites[0].DeveloperId;
           renderData.numDevInvites = data.DeveloperInvites.length;
         }
-        if(data.DeveloperRequests){
+        if(data.DeveloperRequests && data.DeveloperRequests.length){
           renderData.numDevRequests = data.DeveloperRequests.length;
         }
-        if(data.InvestorInvites) {
+        if(data.InvestorInvites && data.InvestorInvites.length) {
           renderData.personId = data.InvestorInvites[0].InvestorId;
           renderData.numInvInvites = data.InvestorInvites.length;
         }
-        if(data.InvestorRequests) {
+        if(data.InvestorRequests && data.InvestorRequests.length) {
           renderData.numInvRequests = data.InvestorRequests.length;
         }
          //res.json(renderData);
