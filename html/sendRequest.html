@@ -23,7 +23,7 @@
 
 
   <!-- developer invites page CSS -->
-  <link rel="stylesheet" type="text/css" href="../public/assets/css/entInvite.css">
+  <link rel="stylesheet" type="text/css" href="../public/assets/css/sendRequest.css">
 
   <!-- GOOGLE FONTS: Nunito and Bitter -->
   <link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
@@ -49,7 +49,7 @@
             <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
             <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
             <li><a class="menuOptions" href="connections.html">My Connections</a></li>
-            <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span>Log Out</a></li>
+            <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
 
           </ul>
         </div>
@@ -62,27 +62,19 @@
     <div class="container">  
       <div class="row">
   <div class="spacer" style="line-height:10px;height:0px;"></div>
-      <h2 class="header">Build Your Team</h2><hr>
+      <h2 class="header">Request to Join Project</h2><hr>
       <div class="col-md-4 col-md-offset-4">
         <div class="spacer" style="line-height:10px;height:10px;"></div>
 
         <form action="/action_page.php">
-          <label for="projectSelection">Select Project&nbsp;</label><select id="projectSelection">
-          <option value="">Choose Project...</option>
-            <option value="project-1">Project 1</option>
-            <option value="project-2">Project 2</option>
-            <option value="project-3">Project 3</option>
-            <option value="project-4">Project 4</option>
-          </select><br><br>
-          <textarea class="formInput col-md-12 col-xs-12" name="message" id="projectInviteMessage" placeholder="Write your message here"></textarea>
+          <textarea class="formInput col-md-12 col-xs-12" name="message" id="requestMessage" placeholder="Write your message here"></textarea>
     
-          <button class="btn btn-primary btn-large btn-block grow submit-button" type="submit">Send Invitation</button>
+          <button class="btn btn-primary btn-large btn-block grow submit-button" type="submit">Send Request</button>
         </form>
       </div>
     </div>
 </div>
 </div>
-
     <!-- /Form -->
 <footer class="footer">
   <!-- Horizontal Line -->

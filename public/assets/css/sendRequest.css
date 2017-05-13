@@ -1,0 +1,23 @@
+.header {
+	text-align: center;
+}
+
+.submit-button {
+	text-transform: uppercase;
+	background-color: #152b45;
+	color: white;
+}
+.submit-button:hover {
+
+	color: #152b45;
+	background-color: #fff;
+	border: 2px solid #152b45;
+
+}
+
+textarea {
+	margin-bottom: 20px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	height: 200px;
+}
