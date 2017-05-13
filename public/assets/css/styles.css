@@ -28,7 +28,7 @@ h2 {
 }
 
 i:hover {
-	color: #1eb2e4;
+	color: #6dd7fb;
 }
 
 p {
@@ -106,7 +106,7 @@ p {
 
 #secondHeader {
 	padding-top: 10px; 
-	padding-bottom: 60px;
+	padding-bottom: 10px;
 }
 
 .listofapps {
@@ -182,7 +182,7 @@ p {
 */}
 
 #secondBigDiv {
-	padding-top: 80px;
+	padding-top: 40px;
 	padding-bottom: 60px;
 
  }
@@ -195,8 +195,8 @@ p {
  }
 
  #fourthBigDiv {
- background-image: linear-gradient(#fff, #ececec);
- box-shadow: inset 0 0 100px hsla(0,0%,0%,.0);
+ background-color: #ececec;
+
  }
 
 #fifthBigDiv {
