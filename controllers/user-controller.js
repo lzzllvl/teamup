@@ -62,6 +62,7 @@ module.exports = function(router, db, passport) {
         var isDev = type == 'dev';
         var isEnt = type == 'ent';
 
+        var personId;
         var renderData = {
           layout: 'dashboard',
           UserId: row.UserId,
@@ -70,16 +71,21 @@ module.exports = function(router, db, passport) {
           isDev: isDev,
           isEnt: isEnt
         }
-        if(data.DeveloperInvites)
+        if(data.DeveloperInvites) {
+          renderData.personId = data.DeveloperInvites[0].DeveloperId;
           renderData.numDevInvites = data.DeveloperInvites.length;
-        if(data.DeveloperRequests)
+        }
+        if(data.DeveloperRequests){
           renderData.numDevRequests = data.DeveloperRequests.length;
-        if(data.InvestorInvites)
+        }
+        if(data.InvestorInvites) {
+          renderData.personId = data.InvestorInvites[0].InvestorId;
           renderData.numInvInvites = data.InvestorInvites.length;
-        if(data.InvestorRequests)
+        }
+        if(data.InvestorRequests) {
           renderData.numInvRequests = data.InvestorRequests.length;
-
-
+        }
+         //res.json(renderData);
         res.render('myprojects', renderData);
       });
     });
@@ -159,6 +165,41 @@ module.exports = function(router, db, passport) {
     })
   });
 
+  router.get('/devinvites/:id', function(req, res) {
+    db.Project.findAll({
+      attributes: ['id', 'project_name']
+    }).then(function(data) {
+      db.DeveloperInvite.findAll({
+        where: {
+          DeveloperId: req.params.id
+        }
+        }).then(function(rows){
+          var resultant = [];
+
+          rows.forEach(function(val) {
+            var projectId = val.ProjectId;
+            var arr = data.filter(function(value) {
+              return value.id == projectId;
+            });
+            resultant.push(arr[0]);
+          });
+          for(var i = 0; i < resultant.length; i++){
+            console.log(resultant[i].id, rows[i].ProjectId);
+            if(resultant[i].id == rows[i].ProjectId){
+              rows[i].name = resultant[i].project_name;
+            }
+          }
+          var renderObject = {
+            projects: resultant,
+            invites: rows
+          }
+          res.json(renderObject);
+        })
+      })
+    });
+
+
+
   router.put('/acceptinvite/:id', function(req, res) {
     //need to find the investor type first
     db.developerInvite.update();
@@ -167,4 +208,4 @@ module.exports = function(router, db, passport) {
     db.InvestorInvite.update();
     db.ProjectInvestor.update();
   });
-  }
+}
