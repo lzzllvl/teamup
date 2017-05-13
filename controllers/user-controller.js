@@ -75,17 +75,17 @@ module.exports = function(router, db, passport) {
         }
         if(data.DeveloperInvites && data.DeveloperInvites.length) {
           renderData.personId = data.DeveloperInvites[0].DeveloperId;
-          renderData.numDevInvites = data.DeveloperInvites.length;
+          renderData.numDevInvites = data.DeveloperInvites.filter(v => v.accepted).length;
         }
         if(data.DeveloperRequests && data.DeveloperRequests.length){
-          renderData.numDevRequests = data.DeveloperRequests.length;
+          renderData.numDevRequests = data.DeveloperRequests.filter(v => v.accepted).length;
         }
         if(data.InvestorInvites && data.InvestorInvites.length) {
           renderData.personId = data.InvestorInvites[0].InvestorId;
-          renderData.numInvInvites = data.InvestorInvites.length;
+          renderData.numInvInvites = data.InvestorInvites.filter(v => v.accepted).length;
         }
         if(data.InvestorRequests && data.InvestorRequests.length) {
-          renderData.numInvRequests = data.InvestorRequests.length;
+          renderData.numInvRequests = data.InvestorRequests.filter(v => v.accepted).length;
         }
          //res.json(renderData);
         res.render('myprojects', renderData);
@@ -185,23 +185,71 @@ module.exports = function(router, db, passport) {
             });
             resultant.push(arr[0]);
           });
-          
+          var renderArray = []
           for(var i = 0; i < resultant.length; i++){
             console.log(resultant[i].id, rows[i].ProjectId);
             if(resultant[i].id == rows[i].ProjectId){
-              rows[i].name = resultant[i].project_name;
+              console.log(rows[i].createdAt);
+              renderArray.push({
+                inviteId: rows[i].id,
+                name : resultant[i].project_name,
+                devId: rows[i].DeveloperId,
+                projectId: resultant[i].id,
+                message: rows[i].message,
+                created: String(rows[i].createdAt).split('T')[0].split('-').reverse().join(':'),
+                accepted: rows[i].accepted});
             }
           }
+          console.log(renderArray)
           var renderObject = {
-            projects: resultant,
-            invites: rows
+            projects: renderArray
           }
-          res.json(renderObject);
+          res.render('developer-invites',renderObject);
         })
       })
     });
 
+    router.get('/invinvites/:id', function(req, res) {
+      db.Project.findAll({
+        attributes: ['id', 'project_name']
+      }).then(function(data) {
+        db.InvestorInvite.findAll({
+          where: {
+            InvestorId: req.params.id
+          }
+          }).then(function(rows){
+            var resultant = [];
 
+            rows.forEach(function(val) {
+              var projectId = val.ProjectId;
+              var arr = data.filter(function(value) {
+                return value.id == projectId;
+              });
+              resultant.push(arr[0]);
+            });
+            var renderArray = []
+            for(var i = 0; i < resultant.length; i++){
+              console.log(resultant[i].id, rows[i].ProjectId);
+              if(resultant[i].id == rows[i].ProjectId){
+                console.log(rows[i].createdAt);
+                renderArray.push({
+                  inviteId: rows[i].id,
+                  name : resultant[i].project_name,
+                  invId: rows[i].InvestorId,
+                  projectId: resultant[i].id,
+                  message: rows[i].message,
+                  created: String(rows[i].createdAt).split('T')[0].split('-').reverse().join(':'),
+                  accepted: rows[i].accepted});
+              }
+            }
+            console.log(renderArray)
+            var renderObject = {
+              projects: renderArray
+            }
+            res.render('investor-invites', renderObject);
+          })
+        })
+      });
 
   router.put('/acceptinvite/:id', function(req, res) {
     //need to find the investor type first
