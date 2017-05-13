@@ -259,7 +259,7 @@ ul.pullUp a:hover:before
   background-color: #ececec;
 }
 
-.box {
+/*.box {
 	display: flex;
 	justify-content: center;
 }
@@ -268,7 +268,7 @@ container {
 	background-color: #1eb2e4;
 	margin-bottom: 10px;
 }
-
+*/
 
 
 /*MEDIA QUERIES*/

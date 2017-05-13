@@ -23,7 +23,7 @@
 
 
   <!-- developer invites page CSS -->
-  <link rel="stylesheet" type="text/css" href="../public/assets/css/allprojects.css">
+  <link rel="stylesheet" type="text/css" href="../public/assets/css/sendInvite.css">
 
   <!-- GOOGLE FONTS: Nunito and Bitter -->
   <link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
@@ -37,7 +37,7 @@
     <body>
   <div class="wrapper">
 
-<div class="container-fluid topContainer">
+  <div class="container-fluid topContainer">
     <header class="row">
       <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
         <div class="container-fluid navbarContainer">
@@ -64,37 +64,32 @@
   <!-- end of top container -->
   </div>
 
-<div class="container">
-  <div class="row">
-    <div class="spacer" style="line-height:10px;height:10px;"></div>
-      <h1>Projects</h1>
-       {{#each project}}}
-        <div class="container oneProject projectContainer">
-          <a class="projectName" href="/project/{{this.id}}"><h3 class="projectName">{{this.project_name}}</h3>
-          </a>
-          <ul class="projectDetailsList" style="list-style-type: none;">                  
-            <li>{{this.project_short_description}}</li>
-            <li><h4>Needs Developer? {{this.needs_developer}}</h4></li>
-            <li><h4>Needs Investor? {{this.needs_investor}}</h4></li>
-            <li><h4>Industry: {{this.project_industry}}</h4></li>
-          </ul>
-          <a href="/project/{{id}}">
-            <button class="btn grow viewProjectBtn">View Project</button>
-          </a>
+    <!-- Table -->
+    <div class="container">  
+      <div class="row">
+  <div class="spacer" style="line-height:10px;height:0px;"></div>
+      <h2 class="header">Build Your Team</h2><hr>
+      <div class="col-md-4 col-md-offset-4">
+        <div class="spacer" style="line-height:10px;height:10px;"></div>
 
-           <div class="spacer" style="line-height:10px;height:10px;"></div>
-          </div>
-                              {{/each}}
-        </div>
-
-
+        <form action="/action_page.php">
+          <label for="projectSelection">Select Project&nbsp;</label><select id="projectSelection">
+          <option value="">Choose Project...</option>
+            <option value="project-1">Project 1</option>
+            <option value="project-2">Project 2</option>
+            <option value="project-3">Project 3</option>
+            <option value="project-4">Project 4</option>
+          </select><br><br>
+          <textarea class="formInput col-md-12 col-xs-12" name="message" id="projectInviteMessage" placeholder="Write your message here"></textarea>
+    
+          <button class="btn btn-primary btn-large btn-block grow submit-button" type="submit">Send Invitation</button>
+        </form>
+      </div>
     </div>
+</div>
+</div>
 
-<!-- end of wrapper -->
-  </div>
-
-
-<!-- Start of Footer -->
+    <!-- /Form -->
 <footer class="footer">
   <!-- Horizontal Line -->
   <div class="divider div-transparent"></div>
@@ -124,6 +119,7 @@
       </div>
     </div>
 
+
     <div class="row bottomFooterRow">
       <div class="col-lg-3">
         <ul class="footerSocial">
@@ -148,5 +144,9 @@
   
 
 </footer>
+    
 </body>
 </html>
+
+
+

@@ -7,20 +7,61 @@
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- general CSS styles.css -->
+  <link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
+
+<!-- profile creation page css -->
+  <link rel="stylesheet" type="text/css" href="../public/assets/css/profileCreation.css">
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- GOOGLE FONTS: Nunito and Bitter -->
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Nunito" rel="stylesheet">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!-- Javascript -->
 
-
+  <title>Team Up</title>
 </head>
 <body>
 
-<div  id="instructions" style="padding-bottom: 10px;">
-    <h2>Instructions:</h2>
-    <h3>1. Choose the tab for the type of profile you want.</h3>
-    <h3>Note: Only Entrepreneurs may create projects.</h3>
-    <h3>2. Complete the form and submit.</h3>
+<div class="wrapper">
+
+  <div class="container-fluid topContainer">
+    <header class="row">
+      <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
+        <div class="container-fluid navbarContainer">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="../public/assets/images/teamup-logo-white-blue.png"> </a>
+          </div>
+          <ul class="nav navbar-nav navbar-right pullUp">
+
+            <li><a class="menuOptions" href="dashboard.html">Dashboard</a></li>
+            <li><a class="menuOptions" href="myprojects.html">My Projects</a></li>
+            <li><a class="menuOptions" href="connections.html">My Connections</a></li>
+            <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <!-- end of top container -->
+  </div>
+
+
+
+<div class="container">
+<div class="row">
+<div id="instructions" style="padding-bottom: 10px;">
+    <h1 class="header">Complete Your Profile</h1>
+    <p class="col-md-4 col-md-offset-4 instructions">Instructions:</p>
+    <ol class="col-md-4 col-md-offset-4 instructionsList">
+        <li>Choose the tab for the type of profile you want.</li>
+        <li>Complete the form and submit.</li><br><strong>*Note: only Entrepreneurs may create projects.</strong>
+    </ol>
+</div>
+</div>
 </div>
 
 
@@ -38,18 +79,17 @@
 
       <div class="box">
         <form class="signup-box" id="devJoinForm">
-            <h2>Just a few more questions...</h2>
-                <hl>
             <h3>Profile Picture</h3>
                 <input type="text" id="profile-pic" placeholder="Image URL">
-            <h3>Linkedin</h3>
-                <input type="text" placeholder="Linkedin URL" name="social">
-            <h3>Contact Information</h3>
-                <input type="text" placeholder="Phone Number" name="email">
-            <h3>Bio - Description</h3>
+            
+            <h3>About Me</h3>
                 <textarea  class="big-text" id="desc" placeholder="About Me"></textarea>
             <h3>Skills</h3>
                 <textarea type="text" id="skills" placeholder="List of Skills"></textarea>
+            <h3>LinkedIn URL</h3>
+                <input type="text" placeholder="Linkedin URL" name="social">
+            <h3>Email Address</h3>
+                <input type="text" placeholder="Phone Number" name="email">
             <h3>Portfolio Website</h3>
                 <input type="text" id="portfolio" placeholder="Portfolio Link">
                 <br>
@@ -113,6 +153,7 @@
   </div>
 
   
+</div>
 </div>
 
 
