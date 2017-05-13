@@ -3,22 +3,71 @@
   <div class="row">
         <div class="spacer" style="line-height:10px;height:10px;"></div>
       <h1 style="display:inline-block;">My Projects</h1>
-       <a href="createproject.html"><button class="btn grow createNewProjectBtn">Create New Project</button></a>
+      {{#if isEnt}}
+       <a href="/entrepreneur/create/{{UserId}}"><button class="btn grow createNewProjectBtn">Create New Project</button></a>
 
-        {{#each project}}
-
-        <div class="container oneProject projectContainer">
-          <a class="projectName" href="/project/{{this.id}}">
-            <h3 class="projectName">{{this.project_name}}</h3>
-          </a>
-          <a href="/project/{{this.id}}">
-            <button class="btn grow viewProjectBtn">View Project</button>
-          </a>
-          <p class="smallText">{{this.project_description}}</p>
-          <div class="spacer" style="line-height:30px;height:30px;"></div>
-        </div>
-        <div class="spacer" style="line-height:10px;height:10px;"></div>
-        {{/each}}
+          {{#each data.Projects}}
+          <div class="container oneProject projectContainer">
+            <a class="projectName" href="/project/{{this.id}}">
+              <h3 class="projectName">{{this.project_name}}</h3>
+            </a>
+            <a href="/project/{{this.id}}">
+              <button class="btn grow viewProjectBtn">View Project</button>
+            </a>
+            <p class="smallText">{{this.short_description}}</p>
+            <div class="spacer" style="line-height:30px;height:30px;"></div>
+          </div>
+          <div class="spacer" style="line-height:10px;height:10px;"></div>
+          {{/each}}
+        {{/if}}
+        {{#if isDev}}
+           {{#if numDevInvites}}
+           <div class="container oneProject projectContainer">
+             <a class="projectName" href="/project/{{this.id}}">
+               <h3 class="projectName">You Have {{numDevInvites}} new Project Invitations!</h3>
+             </a>
+             <a href="/project/{{this.id}}">
+               <button class="btn grow viewProjectBtn">View Invites</button>
+             <div class="spacer" style="line-height:30px;height:30px;"></div>
+           </div>
+           <div class="spacer" style="line-height:10px;height:10px;"></div>
+           {{/if}}
+           {{#if numDevRequests}}
+           <div class="container oneProject projectContainer">
+             <a class="projectName" href="/project/{{this.id}}">
+               <h3 class="projectName">You Have {{numDevRequests}} Pending Requests</h3>
+             </a>
+             <a href="/project/{{this.id}}">
+               <button class="btn grow viewProjectBtn">View Status</button>
+             <div class="spacer" style="line-height:30px;height:30px;"></div>
+           </div>
+           <div class="spacer" style="line-height:10px;height:10px;"></div>
+           {{/if}}
+         {{/if}}
+         {{#if isInv}}
+            {{#if numInvInvites}}
+            <div class="container oneProject projectContainer">
+              <a class="projectName" href="/project/{{this.id}}">
+                <h3 class="projectName">You Have {{numInvInvites}} new Project Invitations!</h3>
+              </a>
+              <a href="/project/{{this.id}}">
+                <button class="btn grow viewProjectBtn">View Invites</button>
+              <div class="spacer" style="line-height:30px;height:30px;"></div>
+            </div>
+            <div class="spacer" style="line-height:10px;height:10px;"></div>
+            {{/if}}
+            {{#if numInvRequests}}
+            <div class="container oneProject projectContainer">
+              <a class="projectName" href="/project/{{this.id}}">
+                <h3 class="projectName">You Have {{numInvRequests}} Pending Requests</h3>
+              </a>
+              <a href="/project/{{this.id}}">
+                <button class="btn grow viewProjectBtn">View Status</button>
+              <div class="spacer" style="line-height:30px;height:30px;"></div>
+            </div>
+            <div class="spacer" style="line-height:10px;height:10px;"></div>
+            {{/if}}
+          {{/if}}
 
   </div>
 </div>

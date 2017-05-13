@@ -40,7 +40,7 @@ module.exports = function(router, db, passport) {
         DeveloperId: data.id,
         message: req.body.message
       }).then(function() {
-        res.redirect('userdash/' + "");
+        res.redirect('userdash/');
       });
     })
   });

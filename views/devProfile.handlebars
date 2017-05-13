@@ -3,12 +3,12 @@
 		<div class="row">
 			<div class="spacer" style="line-height:30px;height:30px;"></div>
 				<div class="col col-12">
-					<h2 class="profileName">Zackery Rilling</h2>
-					<a href="#" class="grow portfolioLink">www.ZRillingz.com</a>
+					<h2 class="profileName">{{developer.User.name}}</h2>
+					<a href="#" class="grow portfolioLink">{{developer.portfolio}}</a>
 					<div class="spacer" style="line-height:30px;height:30px;"></div>
 			 	</div>
 			 	<div class="col col-12">
-					<img class="grow profilePic" src="../public/assets/images/zrillingz.jpg">
+					<img class="grow profilePic" src="/assets/images/zrillingz.jpg">
 					<div class="spacer" style="line-height:30px;height:30px;"></div>
 			 	</div>
 		</div>
@@ -16,7 +16,7 @@
 				<div class="col col-12 profileBio">
 					<h2 class="profileBioLabel">Biography</h2>
 						<p class="profileBioBody">
-						A full stack developer in training, Zackery Rilling is a known hustler with a knack for developing useless apps for beer drinking san diegans. When he's not building apps for the lesser good, Zackery, who prefers to go by Zack, doesn't work and plays video games all day.
+						{{developer.User.bio}}
 					<div class="spacer" style="line-height:30px;height:30px;"></div>
 			 	</div>
 		</div>
@@ -24,19 +24,24 @@
 				<div class="col col-12 profileSkills">
 					<h2 class="profileSkillsLabel">Skills and Technologies</h2>
 			 	</div>
-				<p class="profileBioBody">HTML, CSS, JS, jQuery, Node.js, Handlebars, Express</p>
+				<p class="profileBioBody">{{developer.skills}}</p>
 				<div class="spacer" style="line-height:30px;height:30px;"></div>
 		</div>
 		<div class="spacer" style="line-height:30px;height:30px;"></div>
 		<div class="row inviteBtnRow">
 				<div class="col col-12">
 					<button class="btn btn-lg grow inviteBtn">Invite to a Project</button>
+					<script>
+						$('button').on('click', function(event) {
+							window.location.replace('/invite/developer/{{developer.id}}');
+						});
+					</script>
 			 	</div>
 			 <div class="spacer" style="line-height:30px;height:30px;"></div>
 
 
 		</div>
-			
+
 	</div>
 
 

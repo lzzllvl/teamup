@@ -40,10 +40,10 @@
       <h3 class="row">Developer</h3>
         <div class="container">
           <div>
-              {{#each developer}}
-              <a href="/developer/{{this.id}}">   
+              {{#each developers}}
+              <a href="/developer/{{this.id}}">
                 <ul>
-                    <li>{{this.developer_name}}</li>
+                    <li>{{this.User.name}}</li>
                     <li>{{this.skills}}</li>
                     <li>{{this.experience}}</li>
                 </ul>

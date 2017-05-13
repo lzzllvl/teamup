@@ -3,26 +3,26 @@
 		<div class="row">
 			<div class="col col-12">
 				<div class="createProjectDiv">
-			        <form class="signup-box createProjectForm" id="devJoinForm" action="/projects">
+			        <form class="signup-box createProjectForm" id="devJoinForm" action="/entrepreneur/create/{{UserId}}" method='post'>
 			            <h2>Create a New Project</h2>
 			            <h3>Project Name</h3>
-			                <input class="textInput" type="text" id="project_name" placeholder="Ex. Coffee and Collaboration">
+			                <input class="textInput" type="text" name="project_name" placeholder="Ex. Coffee and Collaboration">
 			            <h3>Industry</h3>
-			                <input class="textInput" type="text" id="project_industry" placeholder="Ex. eCommerce">
+			                <input class="textInput" type="text" name="project_industry" placeholder="Ex. eCommerce">
 			            <h3>Describe the Project</h3>
-			                <textarea  class="big-text textInput" id="project_description" placeholder="Describe your idea in full detail"></textarea>
+			                <textarea  class="big-text textInput" name="project_description" placeholder="Describe your idea in full detail"></textarea>
 			            <h3>What Does Your Project Need?</h3>
-			               	<input type="checkbox" name="developer" id="needs_developer" value="developer">Developers<br>
-  							<input type="checkbox" name="investor" id="needs_investor" value="investor">Investors
+			               	<input type="checkbox" name="needs_developer" value="developer">Developers<br>
+  							<input type="checkbox" name="needs_investor" value="investor">Investors
   						<h3>What is the Scope of the Project?</h3>
-			                <textarea  class="big-text textInput" id="project_scope" placeholder="Detail what your project needs"></textarea>
+			                <textarea  class="big-text textInput" name="project_scope" placeholder="Detail what your project needs"></textarea>
 			            <h3>What Are You Offering?</h3>
 			            <p>Offer to Developers</p>
-			                <input class="textInput" type="text" id="offer_to_developer" placeholder="How much money or equity will you offer?"><br><br>
+			                <input class="textInput" type="text" name="offer_to_developer" placeholder="How much money or equity will you offer?"><br><br>
 			            <p>Offer to Investors</p>
-			                <input class="textInput" type="text" id="offer_to_investor" placeholder="How much equity will you offer?">
+			                <input class="textInput" type="text" name="offer_to_investor" placeholder="How much equity will you offer?">
 			            <h3>Additional Comments</h3>
-			                <textarea  class="big-text textInput" id="desc" placeholder="Add any additional comments about your idea here."></textarea>
+			                <textarea  class="big-text textInput" name="desc" placeholder="Add any additional comments about your idea here."></textarea>
 			                <div class="spacer" style="line-height:30px;height:30px;"></div>
 			                <button class="btn btn-primary btn-lg submit-button grow submitProjectBtn" type="submit">Submit Project</button>
 			        </form>

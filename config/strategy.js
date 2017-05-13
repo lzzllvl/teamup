@@ -32,7 +32,6 @@ module.exports = function(passport, LocalStrategy, User) {
                 return done(null, false);
             }
             User.comparePassword(password, user.password, (err, result) => {
-              console.log(result, err)
               if(!err)
                 return result ? done(null, user): done(null, false);
               else

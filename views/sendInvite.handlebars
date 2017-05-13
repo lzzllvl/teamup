@@ -1,24 +1,22 @@
-    <div class="container">  
-      <div class="row">
-  <div class="spacer" style="line-height:10px;height:0px;"></div>
-      <h2 class="header">Build Your Team</h2><hr>
-      <div class="col-md-4 col-md-offset-4">
-        <div class="spacer" style="line-height:10px;height:10px;"></div>
+<div class="container">
+  <div class="row">
+    <div class="spacer" style="line-height:10px;height:0px;"></div>
+    <h2 class="header">Build Your Team</h2><hr>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="spacer" style="line-height:10px;height:10px;"></div>
 
-        <form action="/entrepenuer/invite" method="POST">
-          <label for="projectSelection">Select Project&nbsp;</label><select id="projectSelection">
-          
-          {{#each Project}}
-          <option value="">Choose Project...</option>
-            <option value="">{{this.project_name}}</option>
-            </select><br><br>
-          {{each}}
+      <form action="/entrepreneur/invite" method="post">
+        <label for="projectSelection">Select Project&nbsp;</label>
+        <select name="ProjectId">
+          {{#each projects}}
+            <option value="">Choose Project...</option>
+            <option value="{{this.id}}">{{this.project_name}}</option>
+          {{/each}}
+          </select><br><br>
 
-          
           <textarea class="formInput col-md-12 col-xs-12" name="message" id="projectInviteMessage" placeholder="Write your message here"></textarea>
-          <input type="text" class="hidden" name="UserId" val="{{UserId}}">
-          <input type="text" class="hidden" name="ProjectId" val="{{ProjectId}}">
-    
+          <input type="text" class="hidden" name="personId" value="{{personId}}">
+          <input type="text" class="hidden" name="personType" value="{{type}}">
           <button class="btn btn-primary btn-large btn-block grow submit-button" type="submit">Send Invitation</button>
         </form>
       </div>
