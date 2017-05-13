@@ -7,10 +7,13 @@ module.exports = function(passport, LocalStrategy, User) {
 
 
     passport.deserializeUser(function(id, done) {
-      User.findById(id, function(err, user) {
-        done(err, user);
+      User.find({where: {id: id}}).then(function(err, user){
+        if(!err)
+          done(null, user);
+        else
+          done(err, null);
       });
-    }); // if you are using sessions
+    });
 
 
 
@@ -28,9 +31,10 @@ module.exports = function(passport, LocalStrategy, User) {
             if(!user) {
                 return done(null, false);
             }
-            User.comparePassword(password, user.password, (err, res) => {
+            User.comparePassword(password, user.password, (err, result) => {
+              console.log(result, err)
               if(!err)
-                return res ? done(null, user): done(null, false);
+                return result ? done(null, user): done(null, false);
               else
                 throw err;
             });

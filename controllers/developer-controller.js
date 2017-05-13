@@ -1,5 +1,5 @@
 
-module.exports = function(router, db){
+module.exports = function(router, db, passport){
   //developer dashboard
   router.get('/developer/:id', function(req, res) {
     let invID = req.params.id;
