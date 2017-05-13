@@ -5,7 +5,6 @@ module.exports = function(router, db, passport) {
   });
 
   router.get('/userdash/:id',  function(req, res) {
-
     db.UserRole.find({
       where: {
         UserId: req.params.id
