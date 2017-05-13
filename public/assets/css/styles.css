@@ -52,6 +52,15 @@ p {
 
 }
 
+.linkedInLogin {
+
+}
+
+.linkedInLogin:hover {
+	color:#152b45;
+	text-decoration: none;
+}
+
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
 
