@@ -90,29 +90,30 @@
       <nav class="navbar navbar-default nav-wrapper" id="nav" role="banner">
         <div class="container-fluid navbarContainer">
           <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="assets/images/teamup-logo-white-blue.png"> </a>
+            <a class="navbar-brand" href="/"><img class="grow navLogoImg" id='navLogo' alt="TeamUp logo" src="/assets/images/teamup-logo-white-blue.png"> </a>
           </div>
           <ul class="nav navbar-nav navbar-right pullUp" id="nav-global">
 
-            <li><a class="menuOptions" href="projects">Find Projects</a></li>
+            
             <li><a class="menuOptions" href="userdash/{{UserId}}">My Projects</a></li>
+            <li><a class="menuOptions" href="/projects">Find Projects</a></li>
             <li>
               <a class="menuOptions" href="#">Messages</a>
               <ul class="nav navbar-nav navbar-right pullUp">
                 <li><a class="menuOptions" href="/invites">Invites</a></li>
-                <li><a class="menuOptions" href="my-requests.html">Requests</a></li>
+                <li><a class="menuOptions" href="/my-requests">Requests</a></li>
             </li>
             </ul>
-            <li><a class="menuOptions" href="index.html"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+
+            <li><a class="menuOptions" href="/"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+
 
           </ul>
         </div>
       </nav>
     </header>
 <!-- text over header image -->
-			<div class="container-fluid text-center homepage homepageBanner">
-				<span class="homepageText"><h1 class="jumbotron homepageTextDiv">Hello There. <br>Welcome to TeamUp!</h1></span>
-			</div>
+
 
 		<!-- end of top container -->
 		</div>
@@ -130,7 +131,7 @@
   <div class="container">
     <div class="row topFooterMenuRow">
       <div class="col-lg-3 col-xs-12 navLogo">
-        <img class="grow footerLogo" alt="TeamUp logo dark" src="assets/images/teamup-dark-blue-logo.png">
+        <img class="grow footerLogo" alt="TeamUp logo dark" src="/assets/images/teamup-dark-blue-logo.png">
       </div>
 
       <div class="col-lg-9 col-xs-12 footer__menu">
