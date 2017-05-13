@@ -4,6 +4,22 @@ module.exports = function(router, db, passport) {
     res.render('index', {});
   });
 
+  router.get('/info/:type', function(req,res) {
+    var template = ''
+    switch(req.params.type){
+      case 'developer':
+        template = 'developer'
+        break;
+      case 'entrepeneur':
+        template = 'entrepeneur';
+        break;
+      case 'investor':
+        template = 'investor';
+        break;
+    }
+    res.render(template);
+  })
+
   router.get('/userdash/:id',  function(req, res) {
     db.UserRole.find({
       where: {
@@ -37,7 +53,7 @@ module.exports = function(router, db, passport) {
         },
         include: include
       }).then(function(data){
-        res.render('dash', {
+        res.render('myprojects', {
           layout: 'dashboard',
           projects: data.Projects
         });

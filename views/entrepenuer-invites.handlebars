@@ -6,8 +6,8 @@
       <h1>My Invites</h1>
         {{#each project}}}
         <div class="container oneRequest requestContainer">
-          <a class="col projectName" href="/project/{{id}}">
-            <h3 class="projectName">{{project_name}}</h3>
+          <a class="col projectName" href="/project/{{this.id}}">
+            <h3 class="projectName">{{this.project_name}}</h3>
           </a>
 
           <h3 class="col col-md-3 inviteLabels">Invitee:</h3>

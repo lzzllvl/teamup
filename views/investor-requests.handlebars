@@ -3,9 +3,9 @@
 <div class="container">
   <div class="row">
         <div class="spacer" style="line-height:10px;height:10px;"></div>
-      <h1>My Invites</h1>
+      <h1>My Requests</h1>
         {{#each project}}}
-        <div class="container oneInvite inviteContainer">
+        <div class="container oneRequest requestContainer">
           <a class="col projectName" href="/project/{{this.id}}">
             <h3 class="projectName">{{this.project_name}}</h3>
           </a>
@@ -14,7 +14,7 @@
             <p class="col col-md-11 smallText">Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!Let's TeamUp on your project!</p>
 
             <div class="spacer" style="line-height:30px;height:30px;"></div>
-          <h3 class="col col-md-3 inviteLabels">Invite Sent:</h3>
+          <h3 class="col col-md-3 inviteLabels">Date Received:</h3>
           <p class="col col-md-11 smallText">May 22, 2017</p>
           <div class="spacer" style="line-height:30px;height:30px;"></div>
           <h3 class="col col-md-3 inviteLabels">Accepted?</h3>
@@ -23,19 +23,14 @@
 
         <div class="row buttonRow">
           <a href="NOT SURE">
-            <button class="btn col-md-2 col-xs-12 grow respondBtn acceptBtn" action="/?_method=PUT" method="POST" class="button-size">Accept</button>
+            <button class="btn col-md-2 col-xs-12 grow respondBtn removeBtn">Remove Request</button>
           </a>
-
-          <a href="NOT SURE">
-            <button class="btn col-md-2 col-xs-12 grow respondBtn declineBtn">Decline</button>
-          </a>
-        </div>
-
           <div class="spacer" style="line-height:30px;height:30px;"></div>
         </div>
-        {{/each}}
 
   </div>
+          {{/each}}
+</div>
 </div>
 
 

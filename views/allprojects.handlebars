@@ -12,7 +12,7 @@
         <div class="container">
           <div class="container-fluid topContainer">
               {{#each projects}}
-                <a href="/project/{{id}}"> <ul>
+                <a href="/project/{{this.id}}"> <ul>
                   <li><a href="/project/{{this.id}}">{{this.project_name}}</a></li>
                   <li>{{this.short_description}}</li>
                   <li>{{this.needs_developer}}</li>
