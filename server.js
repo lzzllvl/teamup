@@ -33,9 +33,10 @@ app.set("view engine", "handlebars");
 //use express-session
 app.use(session({
   secret: 'keyboard cat',
-  resave: false,
+  resave: true,
   saveUninitialized: true
  }));
+ var currentUserId;
 
 //Passport initialize
 app.use(passport.initialize());
@@ -53,6 +54,8 @@ require('./controllers/entrepeneur-controller.js')(router, db, passport);
 require('./controllers/user-controller.js')(router, db, passport);
 
 app.use('/', router);
+
+
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {

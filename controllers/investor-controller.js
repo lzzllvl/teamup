@@ -16,8 +16,8 @@ module.exports = function(router, db, passport) {
       }]
     }).then(function(data) {
       var projects = [];
-      if(data.ProjectInvestor.length) {
-        data.ProjectInvestor.forEach(val => {
+      if(data.ProjectInvestors.length) {
+        data.ProjectInvestors.forEach(val => {
           db.Project.find({
             where : {id:  val},
             attributes: ['project_name']
@@ -26,7 +26,7 @@ module.exports = function(router, db, passport) {
           })
         });
       }
-      res.render('investor', {
+      res.render('invProfile', {
         investor: data,
         projects: projects
       })
@@ -48,20 +48,23 @@ module.exports = function(router, db, passport) {
     })
   });
 
-  //invite an investor
-  router.post("/investor/:id", function(req, res) {
-    let projID = req.params.id;
-    let invID = req.body.id;
-    db.InvestorInvite.create();
-  });
-
-  //investor join
-
-  router.post('/investor/:id/join', function(req, res) {
-    db.Investor.findOne();
-    let proID = req.params.id;
-    let intID = req.body.id;
-    res.render('invJoinForm', {});
+  router.get("/invite/investor/:id", function(req, res) {
+    var invId = req.params.id;
+    db.Entrepeneur.find({
+      where: {
+        id: currentUserId
+      },
+      include: [{
+        model: db.Project,
+        attributes: ['project_name', 'id']
+      }]
+    }).then(function(data) {
+      res.render('sendInvite', {
+        projects: data.Projects,
+        personId: invId,
+        type: 'inv'
+      });
+    })
   });
 }
 

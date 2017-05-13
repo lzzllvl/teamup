@@ -16,22 +16,21 @@ module.exports = function(router, db, passport){
       }]
     }).then(function(data) {
       var projects = [];
-      if(data.ProjectDeveloper.length) {
-        data.ProjectDeveloper.forEach(val => {
+      if(data.ProjectDevelopers.length) {
+        data.ProjectDevelopers.forEach(val => {
           db.Project.find({
             where : {id:  val},
             attributes: ['project_name']
-          }).then(function(datum){
+          }).then(function(datum) {
             projects.push({id: val, project_name: datum.project_name});
-          })
+          });
         });
       }
-      res.render('developer', {
+      res.render('devProfile', {
         developer: data,
         projects: projects
       })
-      //res.json(data);
-      //res.render('home', { devId: req.params.skills });
+      // res.json(data);
     })
   });
 
@@ -43,20 +42,28 @@ module.exports = function(router, db, passport){
         attributes: ['name', 'id']
       }]
     }).then(function(data) {
-      res.json(data);
-      //res.render('alldevelopers', { developers: data });
+      //res.json(data);
+      res.render('alldevelopers', { developers: data });
     })
   });
 
-  router.get("/devInvite", function(req, res) {
-    let devID = req.params.id;
-    db.Developer.findOne();
-    //res.render etc
+  router.get("/invite/developer/:id", function(req, res) {
+    var devId = req.params.id;
+    db.Entrepeneur.find({
+      where: {
+        id: currentUserId
+      },
+      include: [{
+        model: db.Project,
+        attributes: ['project_name', 'id']
+      }]
+    }).then(function(data) {
+      res.render('sendInvite', {
+        projects: data.Projects,
+        personId: devId,
+        type: 'dev'
+      });
+    })
   });
 
-  // a developer
-  // router.post("/project/request", function(req, res) {
-  //   let devID = req.params.id;
-  //   db.DeveloperRequest.create();
-  // });
 }

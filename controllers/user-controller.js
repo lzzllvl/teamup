@@ -10,8 +10,8 @@ module.exports = function(router, db, passport) {
       case 'developer':
         template = 'developer'
         break;
-      case 'entrepeneur':
-        template = 'entrepeneur';
+      case 'entrepreneur':
+        template = 'entrepreneur';
         break;
       case 'investor':
         template = 'investor';
@@ -21,6 +21,7 @@ module.exports = function(router, db, passport) {
   })
 
   router.get('/userdash/:id',  function(req, res) {
+    currentUserId = req.params.id;
     db.UserRole.find({
       where: {
         UserId: req.params.id
@@ -31,17 +32,21 @@ module.exports = function(router, db, passport) {
     }).then(function(row){
       var table = null;
       var include = [];
+      var type;
       switch(row.Role.name) {
         case 'ent':
+          type = 'ent';
           table = db.Entrepeneur;
           include.push(db.Project);
           break;
         case 'dev':
+          type = 'dev';
           table = db.Developer;
           include.push(db.DeveloperInvite);
           include.push(db.DeveloperRequest);
           break;
         case 'inv':
+          type = 'inv';
           table = db.Investor;
           include.push(db.InvestorInvite);
           include.push(db.InvestorRequest);
@@ -53,10 +58,29 @@ module.exports = function(router, db, passport) {
         },
         include: include
       }).then(function(data){
-        res.render('myprojects', {
+        var isInv = type == 'inv';
+        var isDev = type == 'dev';
+        var isEnt = type == 'ent';
+
+        var renderData = {
           layout: 'dashboard',
-          projects: data.Projects
-        });
+          UserId: row.UserId,
+          data: data,
+          isInv: isInv,
+          isDev: isDev,
+          isEnt: isEnt
+        }
+        if(data.DeveloperInvites)
+          renderData.numDevInvites = data.DeveloperInvites.length;
+        if(data.DeveloperRequests)
+          renderData.numDevRequests = data.DeveloperRequests.length;
+        if(data.InvestorInvites)
+          renderData.numInvInvites = data.InvestorInvites.length;
+        if(data.InvestorRequests)
+          renderData.numInvRequests = data.InvestorRequests.length;
+
+
+        res.render('myprojects', renderData);
       });
     });
   });
@@ -66,10 +90,21 @@ module.exports = function(router, db, passport) {
   });
 
 
-  router.post('/login', passport.authenticate('local', {
-    failureRedirect: '/login'
-  }), function(req, res) {
-    res.redirect('/userdash/'+ req.user.id);
+  router.post('/login', function(req, res) {
+    db.User.find({
+      where: {email: req.body.email}
+    }).then(function(row) {
+      if(row) {
+        db.User.comparePassword(req.body.password, row.password, function(err, result){
+          if(err) throw err;
+          result
+            ?  res.redirect('/userdash/'+ row.id)
+            :  res.redirect('/login');
+        })
+      } else {
+        res.redirect('signup');
+      }
+    })
   });
 
   router.get('/join', function(req, res) {
