@@ -4,7 +4,7 @@ module.exports = function(router, db, passport) {
     res.render('index', {});
   });
 
-  route.get('/info/:type', function(req,res) {
+  router.get('/info/:type', function(req,res) {
     var template = ''
     switch(req.params.type){
       case 'developer':
@@ -53,7 +53,7 @@ module.exports = function(router, db, passport) {
         },
         include: include
       }).then(function(data){
-        res.render('dash', {
+        res.render('myprojects', {
           layout: 'dashboard',
           projects: data.Projects
         });

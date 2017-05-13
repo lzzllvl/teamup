@@ -4,7 +4,7 @@
         <div class="spacer" style="line-height:10px;height:10px;"></div>
       <h1 style="display:inline-block;">My Projects</h1>
        <a href="createproject.html"><button class="btn grow createNewProjectBtn">Create New Project</button></a>
-        {{#each project}}}
+        {{#each projects}}
         <div class="container oneProject projectContainer">
           <a class="projectName" href="/project/{{this.id}}">
             <h3 class="projectName">{{this.project_name}}</h3>
@@ -12,7 +12,7 @@
           <a href="/project/{{this.id}}">
             <button class="btn grow viewProjectBtn">View Project</button>
           </a>
-          <p class="smallText">{{this.    project_description}}</p>
+          <p class="smallText">{{this.project_description}}</p>
           <div class="spacer" style="line-height:30px;height:30px;"></div>
         </div>
         <div class="spacer" style="line-height:10px;height:10px;"></div>
