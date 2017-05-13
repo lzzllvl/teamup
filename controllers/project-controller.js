@@ -1,9 +1,10 @@
 module.exports = function(router, db, passport) {
 
   router.get('/project/browse', function(req, res) {
-    db.Project.findAll().done(function(rows){
-      console.log(rows);
-      res.end();
+    db.Project.findAll({
+      attributes: ['id', 'short_description', 'project_name', 'needs_investor', 'needs_developer', 'project_industry']
+    }).done(function(rows) {
+      res.render('allprojects', { projects: rows });
     });
   });
 
@@ -12,12 +13,10 @@ module.exports = function(router, db, passport) {
       where: {
         id: req.params.id
       }
-    }).done(function(record) {
-      console.log(record);
-      res.end();
+    }).done(function(row) {
+      res.render('project', {project: row});
     })
   });
-
 
   router.post("/project/:id", function(req, res) {
     let projID = req.params.id;
