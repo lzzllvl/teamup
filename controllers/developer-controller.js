@@ -59,7 +59,7 @@ module.exports = function(router, db, passport){
       }]
     }).then(function(data) {
       res.render('sendInvite', {
-        layout: 'dashboard'
+        layout: 'dashboard',
         projects: data.Projects,
         personId: devId,
         type: 'dev'
